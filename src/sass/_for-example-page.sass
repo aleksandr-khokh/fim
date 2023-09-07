@@ -1,0 +1,35 @@
+// Для страницы
+aside
+  position: fixed
+  left: 10px
+
+.color-block-wrapper
+  padding: 10px
+
+  &.black
+    background: var(--black)
+    color: white
+
+  &.white
+    background: $white
+    color: var(--black)
+    font-weight: 500
+
+  &.accent
+    background: $accent
+    color: $white
+    font-weight: 500
+
+.color-block-wrapper[class$="-600"],
+.color-block-wrapper[class$="-700"],
+.color-block-wrapper[class$="-800"],
+.color-block-wrapper[class$="-900"]
+  color: $white
+  font-weight: 500
+
+@each $name, $value in $colors
+  .#{$name}
+    background: #{$value}
+
+.alert
+  margin-bottom: 15px

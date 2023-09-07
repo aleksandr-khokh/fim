@@ -1,0 +1,32 @@
+@import "reset"
+@import "variables"
+@import "theme/theme-variables"
+@import "colors"
+@import "grid"
+@import "typography"
+@import "typo-utilities"
+@import "utilities"
+@import "theme/header"
+
+
+html
+  scroll-behavior: smooth
+
+body
+  background: $light-100
+
+h1, h2, h3, h4, h5, h6
+  font:
+    family: $heading-font
+    weight: 400
+  color: var(--black)
+
+p
+  font:
+    family: $text-font
+    weight: 400
+  color: var(--black)
+
+@import "for-example-page"
+
+

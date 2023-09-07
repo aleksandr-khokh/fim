@@ -1,0 +1,70 @@
+@function color($color-name)
+  @return var(--#{$color-name})
+
+// STANDART COLORS
+$black: #080809
+$accent: #FF293F
+$white: white
+
+$light-100: #FAFCFF
+$gray-300: #D0D5DD
+$gray-500: #5D6A83
+$dark: #1C1E23
+
+$neutral-600: #525252
+
+$red-800: #991b1b
+$red-900: #7f1d1d
+
+$yellow-500: #eab308
+$yellow-600: #ca8a04
+
+$green-600: #16a34a
+$green-700: #15803d
+
+$sky-500: #0ea5e9
+$sky-600: #0284c7
+
+$blue-800: #1e40af
+$blue-900: #1e3a8a
+
+$colors: () !default
+$colors: map-merge( ( "black": $black, "white": $white, "accent": $accent ), $colors )
+
+\:root
+  @each $color, $value in $colors
+    --#{$color}: #{$value}
+
+$priority-colors: ( "primary": $blue-800, "secondary": $gray-500, "success": $green-600, "info":5 $sky-500, "warning": $yellow-500, "danger": $red-800, "light": $gray-300, "dark": $black ) !default
+
+\:root
+  @each $color, $value in $priority-colors
+    --#{$color}: #{$value}
+
+$priority-colors-hover: ( "primary": $blue-900, "secondary": $gray-500, "success": $green-700, "info": $sky-600, "warning": $yellow-600, "danger": $red-900, "light": $gray-500, "dark": $neutral-600 ) !default
+
+@each $color, $value in $priority-colors
+  .bg-#{$color}, .btn.btn-#{$color}
+    background-color: $value
+
+@each $color, $value in $priority-colors-hover
+  a.bg-#{$color}, .btn.btn-#{$color}
+    &:hover
+      background-color: darken($value, 10)
+
+.bg-primary,
+.bg-danger,
+.bg-dark
+  color: var(--white)
+
+p, span
+  color: var(--black)
+
+.success
+  color: var(--success)
+
+.warning
+  color: var(--warning)
+
+.danger
+  color: var(--danger)

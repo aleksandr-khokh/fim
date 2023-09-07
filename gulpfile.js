@@ -9,7 +9,7 @@ const {src, dest, watch} = require( 'gulp' ),
    concat = require( 'gulp-concat' ),
    livereload = require( 'gulp-livereload' );
 
-const themeDir = "public/wp-content/themes/taurus/",
+const themeDir = "public/wp-content/themes/fim/",
    sassDir = "src/sass/",
    scriptDir = "src/js/";
 
