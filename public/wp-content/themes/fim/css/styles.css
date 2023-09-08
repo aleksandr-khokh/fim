@@ -1437,126 +1437,60 @@ html {
   }
 }
 
-.sm-text-light {
-  font-size: 1.2rem;
-  font-weight: 200;
-  line-height: 150%;
-}
-@media (min-width: 1400px) {
-  .sm-text-light {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1400px) {
-  .sm-text-light {
-    line-height: 160%;
-  }
-}
-
-.sm-text-normal {
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 150%;
-}
-@media (min-width: 1400px) {
-  .sm-text-normal {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1400px) {
-  .sm-text-normal {
-    line-height: 160%;
-  }
-}
-
-.sm-text-medium {
-  font-size: 1.2rem;
+.sm-text {
   font-weight: 500;
+  font-size: 1.2rem;
   line-height: 150%;
 }
 @media (min-width: 1400px) {
-  .sm-text-medium {
+  .sm-text {
     font-size: 1.25rem;
-  }
-}
-@media (min-width: 1400px) {
-  .sm-text-medium {
-    line-height: 170%;
+    line-height: 160%;
   }
 }
 
 .sm-text-bold {
+  font-weight: 500;
   font-size: 1.2rem;
-  font-weight: 600;
   line-height: 150%;
+  font-weight: 700;
 }
 @media (min-width: 1400px) {
   .sm-text-bold {
     font-size: 1.25rem;
-  }
-}
-@media (min-width: 1400px) {
-  .sm-text-bold {
-    line-height: 170%;
+    line-height: 160%;
   }
 }
 
 .sm-text-uppercase {
+  font-weight: 500;
   font-size: 1.2rem;
+  line-height: 150%;
   line-height: 170%;
 }
 @media (min-width: 1400px) {
   .sm-text-uppercase {
     font-size: 1.25rem;
-  }
-}
-
-.md-text-light {
-  font-size: 1.4rem;
-  font-weight: 200;
-  line-height: 150%;
-}
-@media (min-width: 1400px) {
-  .md-text-light {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .md-text-light {
     line-height: 160%;
   }
 }
 
-.md-text-normal {
+.md-text {
   font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 150%;
 }
 @media (min-width: 1400px) {
-  .md-text-normal {
-    font-size: 1.6rem;
-  }
-}
-
-.md-text-medium {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 150%;
-}
-@media (min-width: 1400px) {
-  .md-text-medium {
-    font-size: 1.6rem;
+  .md-text {
+    font-size: 1.7rem;
   }
 }
 
 .md-text-bold {
   font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 150%;
+  font-weight: 700;
 }
 @media (min-width: 1400px) {
   .md-text-bold {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -1566,98 +1500,14 @@ html {
 }
 @media (min-width: 1400px) {
   .md-text-uppercase {
-    font-size: 1.6rem;
-  }
-}
-
-.lg-text-light {
-  font-size: 1.5rem;
-  font-weight: 200;
-  line-height: 170%;
-}
-@media (min-width: 768px) {
-  .lg-text-light {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-light {
-    font-size: 1.8rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-light {
-    line-height: 160%;
-  }
-}
-
-.lg-text-normal {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 130%;
-}
-@media (min-width: 768px) {
-  .lg-text-normal {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-normal {
-    font-size: 1.8rem;
-  }
-}
-
-.lg-text-medium {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 130%;
-}
-@media (min-width: 768px) {
-  .lg-text-medium {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-medium {
-    font-size: 1.8rem;
-  }
-}
-
-.lg-text-bold {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 130%;
-}
-@media (min-width: 768px) {
-  .lg-text-bold {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-bold {
-    font-size: 1.8rem;
-  }
-}
-
-.lg-text-uppercase {
-  font-size: 1.5rem;
-  line-height: 170%;
-}
-@media (min-width: 768px) {
-  .lg-text-uppercase {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  .lg-text-uppercase {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.2;
 }
@@ -1676,7 +1526,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 h1, .h1 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: calc(1.375rem + 1.5vw);
   letter-spacing: -0.03em;
   margin-top: 0.5rem;
@@ -1691,7 +1541,7 @@ h1, .h1 {
 h2, .h2 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: calc(1.325rem + 0.9vw);
   letter-spacing: 0.015em;
 }
@@ -1705,7 +1555,7 @@ h2, .h2 {
 h3, .h3 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: calc(1.3rem + 0.6vw);
   letter-spacing: 0.01em;
 }
@@ -1719,7 +1569,7 @@ h3, .h3 {
 h4, .h4 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: calc(1.275rem + 0.3vw);
   letter-spacing: 0.015em;
 }
@@ -1733,7 +1583,7 @@ h4, .h4 {
 h5, .h5 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2rem;
   letter-spacing: 0.015em;
 }
@@ -1741,7 +1591,7 @@ h5, .h5 {
 h6, .h6 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.75rem;
   letter-spacing: 0.015em;
 }
@@ -1752,12 +1602,10 @@ p {
 
 p, div {
   font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 150%;
 }
 @media (min-width: 1400px) {
   p, div {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -1784,14 +1632,12 @@ ul:not(.list-unstyled) {
 ul:not([class]) > li,
 ul:not(.list-unstyled) > li {
   font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 150%;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 1400px) {
   ul:not([class]) > li,
   ul:not(.list-unstyled) > li {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 ul:not([class]) > li:before,
@@ -1829,7 +1675,7 @@ small, .small {
   font-size: 0.75em !important;
 }
 
-.uppercase, .sm-text-uppercase, .md-text-uppercase, .lg-text-uppercase {
+.uppercase, table:not(.table-bordered) th, .sm-text-uppercase, .md-text-uppercase {
   text-transform: uppercase;
 }
 
@@ -4193,14 +4039,317 @@ ul.list-inline li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+.header__top .header__top__logo {
+  width: 150px;
 }
 .header__top .header__top__email,
 .header__top .header__top__phone {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
   text-decoration: none;
+}
+@media (min-width: 1400px) {
+  .header__top .header__top__email,
+  .header__top .header__top__phone {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
 }
 .header__top .header__top__email:hover,
 .header__top .header__top__phone:hover {
   text-decoration: underline;
+}
+.header__top address {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+@media (min-width: 1400px) {
+  .header__top address {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+}
+.header__top .social-links li {
+  margin-right: 45px;
+}
+
+.alert {
+  position: relative;
+  padding: 16px 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+@media (min-width: 1400px) {
+  .alert {
+    font-size: 1.7rem;
+  }
+}
+
+.alert-primary {
+  background-color: #bae6fd;
+  border-color: #7dd3fc;
+  color: #1e3a8a;
+}
+
+.alert-secondary {
+  background-color: #D0D5DD;
+  border-color: #5D6A83;
+  color: #1C1E23;
+}
+
+.alert-success {
+  background-color: #a7f3d0;
+  border-color: #86efac;
+  color: #14532d;
+}
+
+.alert-danger {
+  background-color: #fecdd3;
+  border-color: #fb7185;
+  color: #881337;
+}
+
+.alert-warning {
+  background-color: #fef3c7;
+  border-color: #fbbf24;
+  color: #78350f;
+}
+
+.alert-info {
+  background-color: #a5f3fc;
+  border-color: #67e8f9;
+  color: #164e63;
+}
+
+.alert-light {
+  background-color: #FAFCFF;
+  border-color: #D0D5DD;
+  color: #5D6A83;
+}
+
+.alert-dark {
+  background-color: #94a3b8;
+  border-color: #475569;
+  color: #0f172a;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.75em;
+  color: white;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375em;
+}
+.badge:empty {
+  display: none;
+}
+
+h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h2 .badge, .h3 .badge, .h4 .badge, .h5 .badge, .h6 .badge {
+  font-size: 0.75em;
+}
+
+.border, input {
+  border: 1px solid var(--gray-400);
+}
+
+.border-top {
+  border-top: 1px solid var(--gray-400);
+}
+
+.border-end {
+  border-right: 1px solid var(--gray-400);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.border-start {
+  border-left: 1px solid var(--gray-400);
+}
+
+.border-0 {
+  border: none !important;
+}
+
+.border-top-0 {
+  border-top: none !important;
+}
+
+.border-end-0 {
+  border-right: none !important;
+}
+
+.border-bottom-0 {
+  border-bottom: none !important;
+}
+
+.border-start-0 {
+  border-left: none !important;
+}
+
+.btn-blue-rounded, .btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.015em;
+}
+.btn-blue-rounded:hover, .btn:hover {
+  text-decoration: none;
+}
+.btn-blue-rounded:focus, .btn:focus {
+  outline: none;
+}
+
+.btn {
+  color: white;
+  background-color: transparent;
+  border: 4px solid transparent;
+  padding: 0.375em 0.75em;
+  border-radius: 4px;
+  transition: background-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+.btn:hover {
+  transition: background-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+.btn.btn-primary-inverse {
+  background: var(--white);
+  border: 2px solid var(--blue-600);
+  color: var(--blue-600);
+}
+.btn.btn-primary-inverse:hover {
+  background-color: var(--blue-600);
+  color: var(--white);
+}
+
+input {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
+  padding: 14px 16px;
+  width: 100%;
+  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+@media (min-width: 1400px) {
+  input {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+}
+input:focus, input:active {
+  border-color: var(--gray-800);
+  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+input::-moz-placeholder {
+  color: var(--gray-400);
+}
+input::placeholder {
+  color: var(--gray-400);
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+table th, table td {
+  color: var(--black);
+  padding: 0.5em;
+}
+table th {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
+  font-weight: 700;
+}
+@media (min-width: 1400px) {
+  table th {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+}
+table td {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
+  text-align: right;
+}
+@media (min-width: 1400px) {
+  table td {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+}
+table td a {
+  color: var(--black);
+  transition: color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+table td a:hover {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+}
+
+table th, table td {
+  text-align: left;
+}
+
+table:not(.table-bordered) {
+  border-spacing: 0 10px;
+  border-collapse: separate;
+}
+table:not(.table-bordered) th {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 150%;
+  line-height: 170%;
+  vertical-align: bottom;
+}
+@media (min-width: 1400px) {
+  table:not(.table-bordered) th {
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+}
+table:not(.table-bordered) th[scope=row] {
+  background: white;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+table:not(.table-bordered) td {
+  text-align: left;
+  vertical-align: middle;
+  background: white;
+  padding: 12px 20px;
+}
+
+table.table-bordered > :not(caption) > * {
+  border-width: 1px 0;
+  border-color: var(--gray-400);
+  border-style: solid;
+}
+table.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+  border-color: var(--gray-400);
+  border-style: solid;
 }
 
 html {

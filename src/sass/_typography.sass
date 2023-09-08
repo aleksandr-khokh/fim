@@ -30,53 +30,26 @@ $bold-weight: 700
 
 // РАЗМЕРЫ ТЕКСТА
 // SM - SMALL
-=sm-text-size
+=sm-text
+  font-weight: $normal-weight
   font-size: 1.2rem
+  line-height: 150%
   @media (min-width: $xl)
     font-size: 1.25rem
-
-=sm-text-light
-  +sm-text-size
-  font-weight: $light-weight
-  line-height: 150%
-  @media (min-width: $xl)
     line-height: 160%
 
-.sm-text-light
-  +sm-text-light
-
-=sm-text-normal
-  +sm-text-size
-  font-weight: $normal-weight
-  line-height: 150%
-  @media (min-width: $xl)
-    line-height: 160%
-
-.sm-text-normal
-  +sm-text-normal
-
-=sm-text-medium
-  +sm-text-size
-  font-weight: $medium-weight
-  line-height: 150%
-  @media (min-width: $xl)
-    line-height: 170%
-
-.sm-text-medium
-  +sm-text-medium
+.sm-text
+  +sm-text
 
 =sm-text-bold
-  +sm-text-size
+  +sm-text
   font-weight: $bold-weight
-  line-height: 150%
-  @media (min-width: $xl)
-    line-height: 170%
 
 .sm-text-bold
   +sm-text-bold
 
 =sm-text-uppercase
-  +sm-text-size
+  +sm-text
   @extend .uppercase
   line-height: 170%
 
@@ -84,102 +57,28 @@ $bold-weight: 700
   +sm-text-uppercase
 
 // MD - MIDDLE
-=md-text-size
+=md-text
   font-size: 1.4rem
   @media (min-width: $xl)
-    font-size: 1.6rem
+    font-size: 1.7rem
 
-=md-text-light
-  +md-text-size
-  font-weight: $light-weight
-  line-height: 150%
-  @media (min-width: $xl)
-    line-height: 160%
-
-.md-text-light
-  +md-text-light
-
-=md-text-normal
-  +md-text-size
-  font-weight: $normal-weight
-  line-height: 150%
-
-.md-text-normal
-  +md-text-normal
-
-=md-text-medium
-  +md-text-size
-  font-weight: $medium-weight
-  line-height: 150%
-
-.md-text-medium
-  +md-text-medium
+.md-text
+  +md-text
 
 =md-text-bold
-  +md-text-size
+  +md-text
   font-weight: $bold-weight
-  line-height: 150%
 
 .md-text-bold
   +md-text-bold
 
 =md-text-uppercase
-  +md-text-size
+  +md-text
   @extend .uppercase
   line-height: 170%
 
 .md-text-uppercase
   +md-text-uppercase
-
-// LG - LARGE
-=lg-text-size
-  font-size: 1.5rem
-  @media (min-width: $md)
-    font-size: 1.6rem
-  @media (min-width: $xl)
-    font-size: 1.8rem
-
-=lg-text-light
-  +lg-text-size
-  font-weight: $light-weight
-  line-height: 170%
-  @media (min-width: $xl)
-    line-height: 160%
-
-.lg-text-light
-  +lg-text-light
-
-=lg-text-normal
-  +lg-text-size
-  font-weight: $normal-weight
-  line-height: 130%
-
-.lg-text-normal
-  +lg-text-normal
-
-=lg-text-medium
-  +lg-text-size
-  font-weight: $medium-weight
-  line-height: 130%
-
-.lg-text-medium
-  +lg-text-medium
-
-=lg-text-bold
-  +lg-text-size
-  font-weight: $bold-weight
-  line-height: 130%
-
-.lg-text-bold
-  +lg-text-bold
-
-=lg-text-uppercase
-  +lg-text-size
-  @extend .uppercase
-  line-height: 170%
-
-.lg-text-uppercase
-  +lg-text-uppercase
 
 // РАЗМЕРЫ ЗАГОЛОВКОВ
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
@@ -256,7 +155,7 @@ p
   margin-bottom: 1.4em
 
 p, div
-  +md-text-normal
+  +md-text
 
 // СПИСКИ
 ul, ol
@@ -276,7 +175,7 @@ ul:not(.list-unstyled)
   position: relative
 
   & > li
-    +md-text-normal
+    +md-text
     margin-bottom: .5rem
 
     &:before

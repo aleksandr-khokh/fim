@@ -1,0 +1,16 @@
+// INPUT нужно оборачивать в label
+
+input
+  +sm-text
+  padding: 14px 16px
+  width: 100%
+
+  @extend .border
+  +transition( border-color )
+
+  &:focus, &:active
+    border-color: var(--gray-800)
+    +transition( border-color )
+
+  &::placeholder
+    color: var(--gray-400)

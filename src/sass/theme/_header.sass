@@ -1,8 +1,18 @@
 .header__top
-  +flex-row-sb
+  +flex-row-sb-aic
+
+  .header__top__logo
+    width: 150px
 
   .header__top__email,
   .header__top__phone
+    +sm-text
     text-decoration: none
     &:hover
       text-decoration: underline
+
+  address
+    +sm-text
+
+  .social-links li
+    margin-right: 45px

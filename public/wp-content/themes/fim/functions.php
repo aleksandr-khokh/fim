@@ -40,6 +40,7 @@ $args = array(
   ),
   'nav_menus' => array(
     'header_menu' => __( 'Верхнее меню' ),
+    'mobile_menu' => __( 'Мобильное меню' ),
     'footer_menu' => __( 'Меню в подвале' ),
   ),
   'widgets' => array(
