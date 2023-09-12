@@ -1,8 +1,9 @@
 .header__top
   +flex-row-sb-aic
+  padding: 34px 0
 
   .header__top__logo
-    width: 150px
+    width: 112px
 
   .header__top__email,
   .header__top__phone
@@ -14,5 +15,10 @@
   address
     +sm-text
 
-  .social-links li
-    margin-right: 45px
+  .social-links
+    +flex-row-sb
+    margin-bottom: 0
+    padding-left: 0
+
+    li:not(:last-child)
+      margin-right: 45px

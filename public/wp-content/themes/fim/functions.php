@@ -22,7 +22,7 @@ $includes = array(
   '/includes/theme_class.php',
 
   // SHORTCODES
-  '/shortcodes/srtcd-tmp.php',
+  '/shortcodes/consult.php',
 );
 foreach ($includes as $file){
   require_once get_template_directory() . $file;
@@ -41,7 +41,8 @@ $args = array(
   'nav_menus' => array(
     'header_menu' => __( 'Верхнее меню' ),
     'mobile_menu' => __( 'Мобильное меню' ),
-    'footer_menu' => __( 'Меню в подвале' ),
+    'footer_left_menu' => __( 'Меню в подвале левое' ),
+    'foote_right_menu' => __( 'Меню в подвале правое' ),
   ),
   'widgets' => array(
     array(

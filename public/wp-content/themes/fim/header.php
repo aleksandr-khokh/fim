@@ -37,7 +37,7 @@ foreach($options_keys as $key ) {
 
       <div class="logo__wrapper">
         <a href="/" title="<?=bloginfo('description')?>">
-          <img class="header__top__logo" src="/img/brandbook/logo.svg" alt="<?=bloginfo('description')?>">
+          <img class="header__top__logo" src="/img/brandbook/logo-without-paddings.svg" alt="<?=bloginfo('description')?>">
         </a>
       </div>
 
@@ -46,9 +46,9 @@ foreach($options_keys as $key ) {
       <a class="header__top__phone" href="tel:<?=$options['phone']?>" target="_blank"><?=$options['phone']?></a>
 
       <?php if( isset($options['whatsapp']) || isset($options['telegram']) ) { ?>
-        <ul class="social-links">
-          <?php if( isset($options['whatsapp']) ) { ?> <il><a href="<?=$options['whatsapp']?>" title="Напишите нам в WhatsApp"><img src="/img/icons/whatsapp.svg" alt="WhatsApp"></a></il> <?php } ?>
-          <?php if( isset($options['telegram']) ) { ?> <il><a href="<?=$options['telegram']?>" title="Напишите нам в Telegram"><img src="/img/icons/telegram.svg" alt="Telegram"></a></il> <?php } ?>
+        <ul class="social-links list-unstyled">
+          <?php if( isset($options['whatsapp']) ) { ?> <li><a href="<?=$options['whatsapp']?>" title="Напишите нам в WhatsApp"><img src="/img/icons/whatsapp.svg" alt="WhatsApp"></a></li> <?php } ?>
+          <?php if( isset($options['telegram']) ) { ?> <li><a href="<?=$options['telegram']?>" title="Напишите нам в Telegram"><img src="/img/icons/telegram.svg" alt="Telegram"></a></li> <?php } ?>
         </ul>
       <?php } ?>
 
@@ -58,9 +58,10 @@ foreach($options_keys as $key ) {
       <?php
         $menu = wp_nav_menu(
           array(
-            'theme_location' => 'header',
+            'theme_location' => 'header_menu',
             'container' => 'nav',
-            'menu' => 'top',
+            'menu' => 'header',
+            'menu_class' => 'list-unstyled',
             'fallback_cb' => 'wp_page_menu',
             'items_wrap' => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
             'depth' => 1,

@@ -3,10 +3,14 @@
 @import "theme/theme-variables"
 @import "colors"
 @import "grid"
+@import "icons"
 @import "typography"
 @import "typo-utilities"
 @import "utilities"
 @import "theme/header"
+@import "theme/footer"
+@import "theme/header-menu"
+@import "theme/pages/front-page"
 
 @import "components/alerts"
 @import "components/badges"
@@ -15,24 +19,13 @@
 @import "components/inputs"
 @import "components/tables"
 
+@import "shortcodes/consultation"
+
 html
   scroll-behavior: smooth
 
 body
-  background: $light-100
+  background: $light-100 url('/img/ellipse.png') no-repeat
 
-h1, h2, h3, h4, h5, h6
-  font:
-    family: $heading-font
-    weight: 400
-  color: var(--black)
-
-p
-  font:
-    family: $text-font
-    weight: 400
-  color: var(--black)
-
-@import "for-example-page"
-
+  background-position: 100% 0
 

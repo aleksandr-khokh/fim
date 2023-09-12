@@ -8,6 +8,7 @@ $white: white
 
 $light-100: #FAFCFF
 $gray-300: #D0D5DD
+$gray-400: #747F93
 $gray-500: #5D6A83
 $dark: #1C1E23
 
@@ -53,7 +54,7 @@ $rose-400: #fb7185
 $rose-900: #881337
 
 $colors: () !default
-$colors: map-merge( ( "black": $black, "white": $white, "accent": $accent ), $colors )
+$colors: map-merge( ( "black": $black, "white": $white, "accent": $accent, "light-100": $light-100, "gray-300": $gray-300, "gray-400": $gray-400, "gray-500": $gray-500, "dark": $dark ), $colors )
 
 \:root
   @each $color, $value in $colors
@@ -92,3 +93,6 @@ p, span
 
 .danger
   color: var(--danger)
+
+.accent
+  color: var(--accent)

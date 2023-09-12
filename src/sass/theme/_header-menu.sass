@@ -1,0 +1,30 @@
+ul#menu-header
+  +flex-row-sa
+  background: white
+  border-radius: 30px
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.07)
+  margin-bottom: 0
+  position: relative
+  list-style: none
+  z-index: 10
+
+  li.menu-item
+    margin-bottom: 0
+
+    a.nav-link
+      padding: 20px
+      display: inline-block
+
+      +sm-text
+      color: $gray-500
+      text-decoration: none
+      +transition(color)
+
+      &:hover
+        color: $black
+        +transition(color)
+
+    &.current-menu-item
+      a.nav-link
+        color: $black
+

@@ -43,3 +43,35 @@
 .btn-blue-rounded
   @extend %button
 
+// Добавить стрелку внутрь прямоугольной кнопки
+.button_with_arrow
+  @extend %button
+  position: relative
+  padding-top: 9px
+  padding-bottom: 8px
+  @media (min-width: $md)
+    padding: 0
+    height: 56px
+
+  .arrow_for_button
+    display: none
+    @media (min-width: $md)
+      display: block
+      box-sizing: content-box
+      position: absolute
+      top: 0
+      height: 14px
+      width: 7px
+      padding: 21px 35px
+
+  .arrow_for_next_button
+    @extend .arrow_for_button
+    @media (min-width: $md)
+      right: 0
+      border-left: 1px solid transparentize(white, .7)
+
+  .arrow_for_back_button
+    @extend .arrow_for_button
+    @media (min-width: $md)
+      left: 0
+      border-right: 1px solid transparentize(white, .7)

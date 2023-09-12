@@ -5,6 +5,12 @@
 @font-face
   font-family: 'Museo Sans'
   font-style: normal
+  font-weight: 300
+  src: local('Museo Sans Cyrl'), local('MuseoSansCyrl-300'), url('fonts/MuseoSansCyrl300/MuseoSansCyrl300.woff') format('woff'), url('fonts/MuseoSansCyrl300/MuseoSansCyrl300.ttf') format('truetype')
+
+@font-face
+  font-family: 'Museo Sans'
+  font-style: normal
   font-weight: 500
   src: local('Museo Sans Cyrl'), local('MuseoSansCyrl-500'), url('fonts/MuseoSansCyrl500/MuseoSansCyrl500.woff') format('woff'), url('fonts/MuseoSansCyrl500/MuseoSansCyrl500.ttf') format('truetype')
 
@@ -23,9 +29,11 @@
   font:
     family: $heading-font
     style: normal
-    weight: $bold-weight
+    weight: $semibold-weight
 
+$light-weight: 300
 $normal-weight: 500
+$semibold-weight: 600
 $bold-weight: 700
 
 // РАЗМЕРЫ ТЕКСТА
@@ -40,6 +48,10 @@ $bold-weight: 700
 
 .sm-text
   +sm-text
+
+=sm-text-light
+  +sm-text
+  font-weight: $light-weight
 
 =sm-text-bold
   +sm-text
@@ -85,6 +97,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   +ff-headings
   letter-spacing: -.04em
   line-height: 1.2
+  span
+    font-family: inherit
   a
     color: $accent
     &:hover
@@ -169,7 +183,7 @@ ol
     &::marker
       color: $black
 
-ul:not([class]),
+ul:not( [class] ),
 ul:not(.list-unstyled)
   padding-left: 20px
   position: relative
@@ -186,7 +200,7 @@ ul:not(.list-unstyled)
       margin-top: .75rem
       display: inline-block
       left: 0
-      background: url("img/icons/dots.svg") no-repeat
+      background: url("/img/icons/dots.svg") no-repeat
 
 li > ol,
 li > ul

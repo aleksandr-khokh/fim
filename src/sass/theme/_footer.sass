@@ -1,0 +1,50 @@
+#footer
+  margin-top: 100px
+
+  .footer__divider
+    border: none
+    height: 1px
+    background: var(--gray-300)
+    margin-bottom: 36px
+
+  address,
+  .footer__email,
+  .footer__phone
+    +sm-text-light
+    color: var(--gray-400)
+    margin-bottom: 10px
+
+  .footer__email,
+  .footer__phone
+    text-decoration: none
+    display: block
+
+  .footer__details
+    +sm-text-light
+    color: var(--gray-400)
+
+  .copy
+    +sm-text-light
+    color: var(--gray-300)
+    margin-top: 50px
+
+
+.footer__menu-wrapper
+  +flex-row-sb
+
+  #menu-footer-left,
+  #menu-footer-right
+    li.menu-item
+      .nav-link
+        +sm-text
+        color: $gray-400
+        text-decoration: none
+        +transition(color)
+
+        &:hover
+          color: $black
+          +transition(color)
+
+      &.current-menu-item
+        a.nav-link
+          color: $black
