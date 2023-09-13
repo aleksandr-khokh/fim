@@ -1,0 +1,30 @@
+=link-underline
+  text-decoration: none
+  display: inline-block
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  transition: padding-bottom 0.3s $transition
+  &:hover
+    text-decoration: none
+    padding-bottom: 4px
+
+.link-grey-underline
+  color: $black
+  font-weight: 600
+  border-bottom-color: $gray-300
+  +link-underline
+
+
+.link-white-underline
+  color: $white
+  font-weight: normal
+  border-bottom-color: $white
+  +link-underline
+
+// Для ссылок в меню и подвале
+.link-hover-border-bottom
+  display: inline-block
+  text-decoration: none
+  padding-bottom: 3px
+  &:hover
+    border-bottom: 2px solid white

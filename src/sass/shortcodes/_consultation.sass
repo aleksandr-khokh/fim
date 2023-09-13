@@ -1,9 +1,10 @@
 #consultation
+  margin-top: 100px
 
   .consultation__wrapper
+    +shadow
     position: relative
     background: var(--white)
-    box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.07)
     color: var(--black)
     border-radius: 23px
     padding: 65px 25px 30px
@@ -78,10 +79,11 @@
     @extend .button_with_arrow
     grid-area: button
     background: var(--accent)
+    color: var(--white)
     &:hover
-      background: $red-800
+      background: darken($accent, 10)
     &:focus
-      background: $red-900
+      background: lighten($accent, 10)
 
   .consultation__button_send__arrow
     @extend .arrow_for_next_button

@@ -23,6 +23,8 @@ $includes = array(
 
   // SHORTCODES
   '/shortcodes/consult.php',
+  '/shortcodes/portfolio.php',
+  '/shortcodes/reviews.php',
 );
 foreach ($includes as $file){
   require_once get_template_directory() . $file;

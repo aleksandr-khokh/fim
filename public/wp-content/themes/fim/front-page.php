@@ -32,6 +32,8 @@ if ( have_posts() ):
           <div class="col-12 col-md-3"><img src="/img/tailoring-studio.jpg" alt=""></div>
         </div>
 
+        <?php echo do_shortcode('[portfolio]'); ?>
+        <?php echo do_shortcode('[reviews]'); ?>
         <?php echo do_shortcode('[consult]'); ?>
 
         <?php the_content(); ?>

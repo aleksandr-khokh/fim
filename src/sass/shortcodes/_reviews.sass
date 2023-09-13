@@ -1,0 +1,150 @@
+.fade-to-enter-active
+  transition: all 300ms cubic-bezier(.35, 0, 0, 1.01)
+
+.fade-to-leave-active
+  transition: all 0ms cubic-bezier(.35, 0, 0, 1.01)
+  position: absolute
+  z-index: -1
+
+.fade-to-enter, .fade-to-leave-active
+  opacity: 0
+
+
+#review
+  margin-top: 100px
+  margin-bottom: 100px
+  button
+    +reset-buttons
+
+  img
+    max-width: 100%
+
+  .review__item__wrapper
+    position: relative
+    top: 0
+    left: 0
+    height: 400px
+    @media (min-width: $md)
+      height: 220px
+    @media (min-width: $xl)
+      height: auto
+
+  .review__item
+    background: white
+    border-radius: 2px
+    width: 100%
+    position: relative
+    padding: 45px 25px 25px
+    @media (min-width: $md)
+      padding: 40px 50px
+    @media (min-width: $xl)
+      min-height: 350px
+    &:before
+      content: ''
+      background: url("/img/icons/quotes.svg") no-repeat
+      background-size: contain
+      display: block
+      position: absolute
+      width: 57px
+      height: 46px
+      right: 15px
+      opacity: .3
+      @media (min-width: $md)
+        opacity: 1
+        width: 67px
+        height: 54px
+        right: 60px
+      @media (min-width: $lg)
+        width: 99px
+        height: 80px
+        right: 50px
+
+  .left-side
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: baseline
+    @media (min-width: $xl)
+      flex-direction: column
+
+
+  .review__heading
+    margin-top: 30px
+    margin-bottom: 25px
+    @media (min-width: $md)
+      margin-top: 50px
+      margin-bottom: 40px
+
+    .first
+      +h3
+      line-height: 1em
+      margin-bottom: 0
+      @media (min-width: $md)
+        +h2
+        margin-bottom: 5px
+
+    .second
+      +h4
+      margin-left: 30px
+      @media (min-width: $md)
+        margin-left: 75px
+        +h3
+
+  .review__controls
+    +flex-center
+    justify-content: flex-start
+    margin-left: 0
+    @media (min-width: $md)
+      margin-left: 45px
+
+    hr
+      margin: 0
+      position: relative
+      left: -10px
+      width: 33px
+      @media (min-width: $md)
+        width: 67px
+
+    .review__controls__prev,
+    .review__controls__next
+      box-sizing: content-box
+      width: 30px
+      @media (min-width: $md)
+        width: 42px
+
+
+    .review__controls__next
+      position: relative
+      left: -20px
+
+  .review__profile
+    +flex-center
+    margin-bottom: 25px
+
+  .review__img_wrapper
+    box-sizing: content-box
+    margin-right: 10px
+    @media (min-width: $md)
+      margin-right: 25px
+
+  .review__img
+    min-width: 57px
+    @media (min-width: $md)
+      width: 78px
+    @media (min-width: $lg)
+      width: 113px
+
+
+  .review__profile__name
+    @extend .h4
+
+  .review__profile__rank
+    @extend .uppercase
+    +sm-text
+
+  .review__text
+    +md-text
+    font-weight: 400
+    color: $black
+    p:last-child
+      margin-bottom: 0
