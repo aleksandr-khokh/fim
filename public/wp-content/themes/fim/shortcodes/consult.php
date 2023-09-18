@@ -16,8 +16,8 @@ function consult( $atts, $content ){
     <div class="consultation__wrapper">
       <div class="consultation__heading"><?= $atts[ 'title' ] ?></div>
       <form action="/wp-content/themes/fim/mail/send.php" method="post" name="consultation_form" id="consultation_form">
-        <input class="consultation__input_name" type="text" name="name" placeholder="Имя*">
-        <input class="consultation__input_phone" type="phone" name="phone" placeholder="Телефон*">
+        <input class="consultation__input_name" type="text" name="name" placeholder="Имя*" required>
+        <input class="consultation__input_phone" type="phone" name="phone" placeholder="Телефон*" required>
         <button class="consultation__button_send" type="submit">Отправить
           <img class="consultation__button_send__arrow" src="/img/icons/icon-arrow-right-white.svg" alt=""></button>
       </form>

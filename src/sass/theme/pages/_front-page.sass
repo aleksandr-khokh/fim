@@ -1,16 +1,6 @@
-.hero
-  margin-bottom: 180px
-  position: relative
-
-  .hero__title
-    margin-top: 80px
-    font-size: 90px
-    line-height: 107px
-
-  .hero__bg-img
-    position: absolute
-    right: -30px
-    top: -30px
+body.home
+  background: $light-100 url('/img/ellipse.svg') no-repeat
+  background-position: 100% 0
 
 #about
   text-align: center
@@ -27,3 +17,57 @@
 
   .about__more
     color: var(--accent)
+
+#map
+  position: relative
+
+  .map-info__wrapper
+    position: absolute
+    top: 50px
+    background: white
+    width: 300px
+    @media (min-width: $lg)
+      width: 510px
+
+    .map-info__title
+      padding: 60px 60px 35px
+      border-bottom: 1px solid $gray-300
+
+  .contact-card__body
+    padding: 20px
+    @media (min-width: $sm)
+      padding: 30px 50px
+
+  .contact-item
+    +flex-row-start
+    flex-wrap: wrap
+    @media (min-width: $lg)
+      flex-wrap: nowrap
+
+    margin-bottom: 10px
+
+    .contact-item__desc
+      +sm-text
+      color: $gray-400
+      width: 150px
+      @media (min-width: $lg)
+        width: 110px
+        flex-shrink: 0
+      @media (min-width: $xl)
+        width: 130px
+
+    .contact-item__value
+      color: $black
+      +sm-text
+      @media (min-width: $lg)
+        flex-grow: 0
+        flex-shrink: 1
+
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+    &__bottom
+      +sm-text
+

@@ -22,3 +22,43 @@
 
     li:not(:last-child)
       margin-right: 45px
+
+.home .hero
+  margin-bottom: 180px
+
+.hero
+  position: relative
+
+  .hero__title
+    margin-top: 80px
+    font-size: 90px
+    line-height: 107px
+
+  .hero__bg-img
+    position: absolute
+    right: -30px
+    top: -30px
+
+  .send-order__wrapper
+    margin-top: 56px
+    padding: 40px 55px
+    background: white
+    +shadow
+    width: 100%
+    border-radius: 26px
+
+    .send-order__heading
+      +h3
+
+    .send-order__heading, input
+      margin-bottom: 25px
+
+    .send-order__button_send
+      @extend .button_with_arrow
+      background: var(--accent)
+      color: var(--white)
+      width: 100%
+      &:hover
+        background: darken($accent, 10)
+      &:focus
+        background: lighten($accent, 10)

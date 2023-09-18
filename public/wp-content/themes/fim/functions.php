@@ -38,6 +38,7 @@ $args = array(
     array( 'handle' => 'styles', 'src' => 'css/styles.css?1', 'deps' => array() ),
   ),
   'scripts' => array(
+    array( 'handle' => 'vue', 	 'src' => 'js/vue.js', 'deps' => array( 'jquery' ) ),
     array( 'handle' => 'script', 'src' => 'js/script.js', 'deps' => array( 'jquery' ) ),
   ),
   'nav_menus' => array(
@@ -101,4 +102,15 @@ function add_type_attribute($tag, $handle, $src) {
 
   $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
   return $tag;
+}
+// Логин в шапку
+add_action('login_head', 'custom_login_logo');
+function custom_login_logo() {
+  echo '<style>
+      .login h1 a, .interim-login.login h1 a  { 
+        background: url("/img/brandbook/logo-desc-bottom-right.svg") no-repeat !important; 
+        background-size: contain !important;
+        width: 160px;
+      }
+      </style>';
 }
