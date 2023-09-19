@@ -4300,6 +4300,16 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   color: var(--white);
 }
 
+.btn-black-rounded {
+  background-color: #0f172a;
+  border-radius: 26px;
+  color: white;
+  padding: 0.375em 2.75em;
+}
+.btn-black-rounded:hover {
+  background-color: #7f1d1d;
+}
+
 .button_with_arrow, #consultation .consultation__button_send, .hero .send-order__wrapper .send-order__button_send {
   position: relative;
   padding-top: 9px;

@@ -52,6 +52,14 @@ foreach($options_keys as $key ) {
         </ul>
       <?php } ?>
 
+      <?php if(is_front_page()) { ?>
+        <button data-fancybox data-src="#order-form" class="btn btn-black-rounded">Оставить заявку</button>
+
+        <div style="display: none;" id="order-form">
+          <?php require 'templates/order-form.php' ?>
+        </div>
+      <?php } ?>
+
     </div>
 
     <div class="header__menu">
