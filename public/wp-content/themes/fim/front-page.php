@@ -76,14 +76,9 @@ if ( have_posts() ):
       </section>
 
       <div class="container">
-        <?php echo do_shortcode('[consult]'); ?>
-
-
-        <div class="d12">
-          <div>По вопросам печати</div>
-        </div>
-
         <?php the_content(); ?>
+        <?php echo do_shortcode('[consult]'); ?>
+        <?php echo do_shortcode('[rhombus_contacts]'); ?>
       </div>
     </main>
 

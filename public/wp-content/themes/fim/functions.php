@@ -25,6 +25,7 @@ $includes = array(
   '/shortcodes/consult.php',
   '/shortcodes/portfolio.php',
   '/shortcodes/reviews.php',
+  '/shortcodes/rhombus-contacts.php',
 );
 foreach ($includes as $file){
   require_once get_template_directory() . $file;
@@ -61,6 +62,11 @@ $theme = new Theme_Class( $args );
 //add_action( 'init', function(){
 //  wp_register_script( 'slick', get_template_directory_uri() . '/js/assets/slick.min.js', array('jquery'), '', true );
 //} );
+
+// Используется для телефона, чтобы оставить только цифры в номере
+function return_phone_from_string( $string ) {
+  return preg_replace( "/[^+0-9]/", '', $string );
+}
 
 // Вывод мета тегов
 add_filter( 'pre_get_document_title', 'get_title_meta_tag' );
