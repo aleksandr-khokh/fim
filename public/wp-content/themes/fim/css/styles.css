@@ -4257,7 +4257,7 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   border-left: none !important;
 }
 
-.button_with_arrow, #consultation .consultation__button_send, .hero .send-order__wrapper .send-order__button_send, .btn-blue-rounded, .btn {
+.button_with_arrow, #consultation .consultation__button_send, .send-order__button_send, .btn-blue-rounded, .btn {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -4273,10 +4273,10 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   font-size: 1.75rem;
   letter-spacing: 0.015em;
 }
-.button_with_arrow:hover, #consultation .consultation__button_send:hover, .hero .send-order__wrapper .send-order__button_send:hover, .btn-blue-rounded:hover, .btn:hover {
+.button_with_arrow:hover, #consultation .consultation__button_send:hover, .send-order__button_send:hover, .btn-blue-rounded:hover, .btn:hover {
   text-decoration: none;
 }
-.button_with_arrow:focus, #consultation .consultation__button_send:focus, .hero .send-order__wrapper .send-order__button_send:focus, .btn-blue-rounded:focus, .btn:focus {
+.button_with_arrow:focus, #consultation .consultation__button_send:focus, .send-order__button_send:focus, .btn-blue-rounded:focus, .btn:focus {
   outline: none;
 }
 
@@ -4310,23 +4310,23 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   background-color: #7f1d1d;
 }
 
-.button_with_arrow, #consultation .consultation__button_send, .hero .send-order__wrapper .send-order__button_send {
+.button_with_arrow, #consultation .consultation__button_send, .send-order__button_send {
   position: relative;
   padding-top: 9px;
   padding-bottom: 8px;
   line-height: 0;
 }
 @media (min-width: 768px) {
-  .button_with_arrow, #consultation .consultation__button_send, .hero .send-order__wrapper .send-order__button_send {
+  .button_with_arrow, #consultation .consultation__button_send, .send-order__button_send {
     padding: 0;
     height: 56px;
   }
 }
-.button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .hero .send-order__wrapper .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .hero .send-order__wrapper .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .hero .send-order__wrapper .send-order__button_send .arrow_for_next_button, .hero .send-order__wrapper .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .hero .send-order__wrapper .send-order__button_send .consultation__button_send__arrow {
+.button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
   display: none;
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .hero .send-order__wrapper .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .hero .send-order__wrapper .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .hero .send-order__wrapper .send-order__button_send .arrow_for_next_button, .hero .send-order__wrapper .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .hero .send-order__wrapper .send-order__button_send .consultation__button_send__arrow {
+  .button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
     display: block;
     box-sizing: content-box;
     position: absolute;
@@ -4337,13 +4337,13 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   }
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .hero .send-order__wrapper .send-order__button_send .arrow_for_next_button, .hero .send-order__wrapper .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .hero .send-order__wrapper .send-order__button_send .consultation__button_send__arrow {
+  .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
     right: 0;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .hero .send-order__wrapper .send-order__button_send .arrow_for_back_button {
+  .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button {
     left: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -4567,7 +4567,8 @@ table.table-bordered > :not(caption) > * > * {
   right: -30px;
   top: -30px;
 }
-.hero .send-order__wrapper {
+
+.send-order__wrapper {
   margin-top: 56px;
   padding: 40px 55px;
   background: white;
@@ -4575,7 +4576,8 @@ table.table-bordered > :not(caption) > * > * {
   width: 100%;
   border-radius: 26px;
 }
-.hero .send-order__wrapper .send-order__heading {
+
+.send-order__heading {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -4583,23 +4585,25 @@ table.table-bordered > :not(caption) > * > * {
   letter-spacing: 0.01em;
 }
 @media (min-width: 1400px) {
-  .hero .send-order__wrapper .send-order__heading {
+  .send-order__heading {
     font-size: 2.75rem;
     letter-spacing: -0.02em;
   }
 }
-.hero .send-order__wrapper .send-order__heading, .hero .send-order__wrapper input {
+
+.send-order__heading, input {
   margin-bottom: 25px;
 }
-.hero .send-order__wrapper .send-order__button_send {
+
+.send-order__button_send {
   background: var(--accent);
   color: var(--white);
   width: 100%;
 }
-.hero .send-order__wrapper .send-order__button_send:hover {
+.send-order__button_send:hover {
   background: #f50019;
 }
-.hero .send-order__wrapper .send-order__button_send:focus {
+.send-order__button_send:focus {
   background: #ff5c6d;
 }
 
@@ -4857,6 +4861,10 @@ body.home {
 
 #consultation {
   margin-top: 100px;
+}
+#consultation::after {
+  content: "";
+  background: url(/img/brandbook/ellipse-light.svg) no-repeat;
 }
 #consultation .consultation__wrapper {
   box-shadow: 0 9px 40px 0 rgba(8, 8, 9, 0.05);

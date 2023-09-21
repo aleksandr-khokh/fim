@@ -53,7 +53,7 @@ foreach($options_keys as $key ) {
       <?php } ?>
 
       <?php if(is_front_page()) { ?>
-        <button data-fancybox data-src="#order-form" class="btn btn-black-rounded">Оставить заявку</button>
+        <button data-fancybox data-src="#order-form" class="btn btn-black-rounded uppercase">Оставить заявку</button>
 
         <div style="display: none;" id="order-form">
           <?php require 'templates/order-form.php' ?>

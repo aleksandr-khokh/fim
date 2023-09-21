@@ -38,9 +38,9 @@ if ( have_posts() ):
         </section>
         <div class="row">
           <div class="col-12 col-md-3"><img src="/img/tailoring-studio.jpg" alt=""></div>
-          <div class="col-12 col-md-3"><img src="/img/tailoring-studio.jpg" alt=""></div>
-          <div class="col-12 col-md-3"><img src="/img/tailoring-studio.jpg" alt=""></div>
-          <div class="col-12 col-md-3"><img src="/img/tailoring-studio.jpg" alt=""></div>
+          <div class="col-12 col-md-3"><img src="/img/about/EPRINT277116 1.png" alt=""></div>
+          <div class="col-12 col-md-3"><img src="/img/about/EPRINT277284 1.png" alt=""></div>
+          <div class="col-12 col-md-3"><img src="/img/about/EPRINT277309 1.png" alt=""></div>
         </div>
 
         <?php echo do_shortcode('[portfolio]'); ?>

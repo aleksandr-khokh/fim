@@ -13,7 +13,9 @@
              </div>
 
              <div class="col-12 col-xl-4 offset-xl-2">
-               <?php require 'templates/order-form.php' ?>
+               <div class="send-order__wrapper">
+                <?php require 'templates/order-form.php' ?>
+               </div>
              </div>
            </div>
 
