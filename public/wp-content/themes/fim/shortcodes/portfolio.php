@@ -10,6 +10,154 @@ function portfolio( $atts, $content ){
       'title' => 'Наши работы',
     ], $atts );
 
+  add_action( 'wp_print_footer_scripts', function() {
+    echo '<script>
+const dishes = new Vue({
+    el: \'#menu-slider\',
+    data: {
+      activeCat: 1,
+        activeItem: 1,
+        main: [
+            {
+              header: "Худи с капюшоном",
+                desc: "<p>У нас многолетние отношения с проверенными поставщиками футера. Можем зарезервировать под вас определенный цвет, забрать ткань в срочном порядке, минимизировать брак.</p><p>Мы используем футер 320-340 гр.</p><p>Много вариантов оттенков и фактуры</p>",
+                energy: "Тираж от 300 штук",
+                bigimg: "/img/portfolio/hudi.jpg",
+                smallimg: "/img/restaurant/menu/hot/IMG_1536_kartoshka-min.png",
+            },
+            {
+              header: "Сумки",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/hot/IMG_1562_ryba.jpg",
+                smallimg: "/img/restaurant/menu/hot/IMG_1562_ryba-min.png",
+            },
+            {
+              header: "Худи",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/hot/IMG_1563_ryba.jpg",
+                smallimg: "/img/restaurant/menu/hot/IMG_1563_ryba-min.png",
+            },
+        ],
+        soups: [
+            {
+              header: "Суп и хлеб",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/soups/IMG_1503_sup-hleb.jpg",
+                smallimg: "/img/restaurant/menu/soups/IMG_1503_sup-hleb-min.png",
+            },
+            {
+              header: "Суп с морепродуктами",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/soups/IMG_1517_moreproducty.jpg",
+                smallimg: "/img/restaurant/menu/soups/IMG_1517_moreproducty-min.png",
+            },
+            {
+              header: "Суп с морковью",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/soups/IMG_1518_morkov.jpg",
+                smallimg: "/img/restaurant/menu/soups/IMG_1518_morkov-min.png",
+            },
+        ],
+        deserts: [
+            {
+              header: "Сырники",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/deserts/IMG_1416-syrniki.jpg",
+                smallimg: "/img/restaurant/menu/deserts/IMG_1416-syrniki-min.png",
+            },
+            {
+              header: "Вафли",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/deserts/IMG_1429-vafli-syrniki.jpg",
+                smallimg: "/img/restaurant/menu/deserts/IMG_1429-vafli-syrniki-min.png",
+            },
+            {
+              header: "Штрудель",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/deserts/IMG_1458-shtrudel.jpg",
+                smallimg: "/img/restaurant/menu/deserts/IMG_1458-shtrudel-min.png",
+            },
+            {
+              header: "Щербет",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/deserts/IMG_1479-sherbet.jpg",
+                smallimg: "/img/restaurant/menu/deserts/IMG_1479-sherbet-min.png",
+            },
+            {
+              header: "Ананас",
+                desc: "",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/deserts/IMG_1496_ananas.jpg",
+                smallimg: "/img/restaurant/menu/deserts/IMG_1496_ananas-min.png",
+            },
+        ],
+        salads: [
+            {
+              header: "Хамон",
+                desc: "Хамон",
+                energy: "368",
+                bigimg: "/img/restaurant/menu/salads/IMG_1523_hamon.jpg",
+                smallimg: "/img/restaurant/menu/salads/IMG_1523_hamon-min.png",
+            },
+        ],
+   },
+    computed: {
+      itemsLength: function(){
+        if( this.activeCat === 1 ){
+          return this.main.length;
+        } else if (this.activeCat === 2 ) {
+          return this.soups.length;
+        } else if (this.activeCat === 3 ) {
+          return this.deserts.length;
+        } else if (this.activeCat === 4 ) {
+          return this.salads.length;
+        }
+      },
+    },
+    methods: {
+      prevCat: function(){
+        if( this.activeCat === 1 ){
+          this.activeCat = 4;
+        }else {
+          this.activeCat--;
+        }
+        this.activeItem = 1;
+      },
+      nextCat: function(){
+        if(this.activeCat === 4){
+          this.activeCat = 1;
+        }else{
+          this.activeCat++;
+        }
+        this.activeItem = 1;
+      },
+      prevItem: function(){
+        if( this.activeItem <= 1 ){
+          this.activeItem = this.itemsLength;
+        } else {
+          this.activeItem--;
+        }
+      },
+      nextItem: function () {
+        if( this.activeItem >= this.itemsLength ){
+          this.activeItem = 1;
+        } else {
+          this.activeItem++;
+        }
+      }
+    }
+});</script>';
+  } );
+
   ob_start(); ?>
 
   <div id="menu-slider">
@@ -18,10 +166,10 @@ function portfolio( $atts, $content ){
         <button @click="prevCat"><img src="/img/icons/icon-arrow-up-black.svg" alt=""></button>
       </div>
 
-      <div class="menu-cat" :class="{active : activeCat == 1}" @click="activeCat = 1">Горячее</div>
-      <div class="menu-cat" :class="{active : activeCat == 2}" @click="activeCat = 2">Супы</div>
-      <div class="menu-cat" :class="{active : activeCat == 3}" @click="activeCat = 3">Десерты</div>
-      <div class="menu-cat" :class="{active : activeCat == 4}" @click="activeCat = 4">Салаты</div>
+      <div class="menu-cat" :class="{active : activeCat == 1}" @click="activeCat = 1">Пошив</div>
+      <div class="menu-cat" :class="{active : activeCat == 2}" @click="activeCat = 2">Печать</div>
+      <div class="menu-cat" :class="{active : activeCat == 3}" @click="activeCat = 3">Вышивка</div>
+      <div class="menu-cat" :class="{active : activeCat == 4}" @click="activeCat = 4">Разработка</div>
 
       <div class="menu-item-nav next">
         <button @click="nextCat"><img src="/img/icons/icon-arrow-down-black.svg" alt=""></button>
@@ -64,11 +212,11 @@ function portfolio( $atts, $content ){
               </div>
 
               <p class="energy" v-for="(item, index) in main" :class="{ active: activeItem === ++index }">
-                <span class="value">{{ item['energy'] }}</span> EUR</p>
+                <span class="value">{{ item['energy'] }}</span></p>
             </div>
           </div>
           <hr class="d-none d-xl-block">
-          <p class="dishes-desc" v-for="(item, index) in main" :class="{ active: activeItem === ++index }">{{item['desc']}}</p>
+          <p class="dishes-desc" v-for="(item, index) in main" :class="{ active: activeItem === ++index }" v-html="item['desc']"></p>
         </div>
       </div><!-- menu-desc-wrapper -->
     </div>
