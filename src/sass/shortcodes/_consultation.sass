@@ -1,9 +1,22 @@
 #consultation
-  margin-top: 100px
+  position: relative
+  margin-top: 50px
+  @media (min-width: $md)
+    margin-top: 100px
 
   &::after
     content: ''
-    background: url(/img/brandbook/ellipse-light.svg) no-repeat
+    background: url(/img/brandbook/ellipse-horizontal.svg) no-repeat
+    background-size: contain
+    width: 611px
+    height: 390px
+    position: absolute
+    top: 100px
+    right: -150px
+    z-index: -1
+    display: none
+    @media (min-width: $lg)
+      display: block
 
   .consultation__wrapper
     +shadow
@@ -11,38 +24,19 @@
     background: var(--white)
     color: var(--black)
     border-radius: 23px
-    padding: 65px 25px 30px
+    padding: 25px
     overflow: hidden
     @media (min-width: $md)
       padding: 50px 80px 50px
     @media (min-width: $xl)
       padding: 60px 70px 65px
-    &:before
-      content: ''
-      display: block
-      position: absolute
-      z-index: 10
-      background: url('/img/icons/consultation-rhombus.svg') no-repeat
-      background-size: cover
-      width: 255px
-      height: 162px
-      top: -105px
-      right: -30px
-      @media (min-width: $md)
-        width: 363px
-        height: 252px
-        top: -165px
-        right: 0
-      @media (min-width: $xl)
-        width: 364px
-        height: 227px
 
   [class*='col-']
     padding-left: 15px
     padding-right: 15px
 
   .consultation__heading
-    +h2
+    +h1
     margin-bottom: 15px
     @media (min-width: $md)
       margin-bottom: 30px
@@ -52,6 +46,7 @@
 
   #consultation_form
     display: grid
+    grid-template: "name" "phone" "button"
     grid-template-columns: 1fr
     grid-row-gap: 12px
     @media (min-width: $md)

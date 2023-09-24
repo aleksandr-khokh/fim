@@ -1,0 +1,37 @@
+.num-props
+  @media (min-width: $md)
+    margin-bottom: 30px
+
+  .num-props__wrapper
+    display: flex
+    flex-wrap: wrap
+
+  .num-props__item
+    display: flex
+    margin-bottom: 30px
+    @media (min-width: $md)
+      width: calc( 50% - 20px )
+    @media (min-width: $xl)
+      width: calc( 33% - 20px )
+      margin-right: 20px
+
+    &:nth-child(2n)
+      @media (min-width: $md)
+        margin-left: 20px
+      @media (min-width: $xl)
+        margin-left: 0
+
+  .num-props__order
+    @extend .accent-underline
+    font-size: 40px
+    font-weight: 600
+    line-height: 120%
+    margin-right: 20px
+    &::after
+      border-bottom-width: .3em
+      top: 30px
+      bottom: auto
+
+  .numb-props__desc
+    grid-area: desc
+    +md-text

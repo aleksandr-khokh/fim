@@ -1,0 +1,22 @@
+.top-bar-mobile
+  +shadow
+  background: white
+  position: fixed
+  z-index: 300
+  width: 100%
+  top: -1px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  height: 52px
+  padding: 0 15px
+
+  @media(min-width: $lg)
+    display: none
+
+  .top-bar-mobile__logo
+    width: 80px
+
+  .top-bar-mobile__phone__link
+    text-decoration: none

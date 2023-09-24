@@ -40,10 +40,10 @@ $bold-weight: 700
 // SM - SMALL
 =sm-text
   font-weight: $normal-weight
-  font-size: 1.2rem
+  font-size: 13px
   line-height: 150%
   @media (min-width: $xl)
-    font-size: 1.25rem
+    font-size: 15px
     line-height: 160%
 
 .sm-text
@@ -70,9 +70,10 @@ $bold-weight: 700
 
 // MD - MIDDLE
 =md-text
-  font-size: 1.4rem
+  font-size: 16px
+  line-height: 1.4
   @media (min-width: $xl)
-    font-size: 1.7rem
+    font-size: 20px
 
 .md-text
   +md-text
@@ -144,6 +145,8 @@ h3, .h3
   +ff-headings
   font-size: calc(1.275rem + .3vw)
   letter-spacing: 0.015em
+  @media (min-width: $sm)
+    font-size: 2rem
   @media (min-width: $xl)
     font-size: 2.25rem
     letter-spacing: -0.01em

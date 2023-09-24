@@ -31,7 +31,21 @@ foreach($options_keys as $key ) {
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header>
+<header id="header">
+  <div class="top-bar-mobile">
+    <button class="top-bar-mobile__menu-button" @click="toggleMobileMenu">
+      <div id="lottie-menu" style="width: 32px; height: 32px;"></div>
+    </button>
+
+    <a href="/"><img class="top-bar-mobile__logo" src="/img/brandbook/logo.svg" alt=""></a>
+
+    <a class="top-bar-mobile__phone__link" href="tel:<?=$options['phone']?>" rel="nofollow"><i class="bi bi-telephone"></i></a>
+  </div>
+
+  <!-- Выпадающее Mobile меню -->
+  <?php require 'templates/mobile-menu.php'; ?>
+
+
   <div class="container">
     <div class="header__top">
 
@@ -52,13 +66,13 @@ foreach($options_keys as $key ) {
         </ul>
       <?php } ?>
 
-      <?php if(is_front_page()) { ?>
+
         <button data-fancybox data-src="#order-form" class="btn btn-black-rounded uppercase">Оставить заявку</button>
 
         <div style="display: none;" id="order-form">
           <?php require 'templates/order-form.php' ?>
         </div>
-      <?php } ?>
+
 
     </div>
 
@@ -83,3 +97,7 @@ foreach($options_keys as $key ) {
     </div>
   </div>
 </header>
+
+<?php if(!is_front_page() && function_exists('dp_breadcrumb')){ ?>
+  <div class="container"><?= dp_breadcrumb(); ?></div>
+<?php } ?>

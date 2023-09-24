@@ -1,0 +1,44 @@
+aside.mobile-menu__content__wrapper
+  position: fixed
+  width: 100%
+  top: 50px
+  z-index: 200
+  background: white
+  height: 0
+  overflow: hidden
+  @media (min-width: $lg)
+    display: none
+
+  .mobile-menu__content
+    border-top: 1px solid $gray-300
+    position: relative
+    height: calc(100% - 50px)
+    padding: 20px
+    overflow-y: scroll
+
+  #menu-mobile
+    margin-bottom: 30px
+    .nav-link
+      color: $gray-500
+      display: block
+      padding: 10px
+
+  a
+    +md-text
+    text-decoration: none
+
+  .mobile-menu__email,
+  .mobile-menu__phone
+    color: $gray-400
+
+  .social-links
+    +flex-row-start
+    li:not(:last-child)
+      margin-right: 30px
+
+    .block-icon_img
+      width: 20px
+      path
+        fill: $gray-400
+
+

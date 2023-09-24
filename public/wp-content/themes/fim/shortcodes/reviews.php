@@ -4,13 +4,13 @@
  */
 add_shortcode( 'reviews', 'reviews' );
 
-function reviews( $atts, $content ){
+function reviews ( $atts, $content ){
   $atts = shortcode_atts(
     [
       'title' => 'Отзывы наших клиентов',
     ], $atts );
 
-  add_action( 'wp_print_footer_scripts', function() {
+  add_action( 'wp_print_footer_scripts', function(){
     echo '
     <script>const reviews = new Vue({
           el: \'#review\', 
@@ -67,54 +67,51 @@ function reviews( $atts, $content ){
   ob_start(); ?>
 
   <section id="review">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-xl-4">
-          <hr class="my-0">
-          <div class="left-side">
-            <div class="review__heading">
-              <div class="first">Отзывы</div>
-              <div class="second">наших клиентов</div>
-            </div>
-            <div class="review__controls">
-              <button class="review__controls__prev" @click="prevReview">
-                <img src="/img/icons/icon-review-button-left.svg" alt="Предыдущий">
-              </button>
-              <hr>
-              <button class="review__controls__next" @click="nextReview">
-                <img src="/img/icons/icon-review-button-right.svg" alt="Следующий">
-              </button>
-            </div>
+    <div class="row">
+      <div class="col-12 col-xl-4">
+        <hr class="my-0">
+        <div class="left-side">
+          <div class="review__heading">
+            <div class="first">Отзывы</div>
+            <div class="second">наших клиентов</div>
+          </div>
+          <div class="review__controls">
+            <button class="review__controls__prev" @click="prevReview">
+              <img src="/img/icons/icon-review-button-left.svg" alt="Предыдущий">
+            </button>
+            <hr>
+            <button class="review__controls__next" @click="nextReview">
+              <img src="/img/icons/icon-review-button-right.svg" alt="Следующий">
+            </button>
           </div>
         </div>
+      </div>
 
-        <div class="col-12 col-xl-8">
-          <div class="review__item__wrapper">
-            <transition name="fade-to" v-for="(item, index) in reviews" :key="item.id">
-              <div class="review__item" v-show="++index == activeReviewNumber">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="review__profile">
-                      <div class="review__img_wrapper">
-                        <img class="review__img" :src="item['avatar']" alt="">
-                      </div>
-                      <div class="review__profile__desc">
-                        <div class="review__profile__name">{{ item['name'] }}</div>
-                        <div class="review__profile__rank">{{ item['source'] }}</div>
-                      </div>
+      <div class="col-12 col-xl-8">
+        <div class="review__item__wrapper">
+          <transition name="fade-to" v-for="(item, index) in reviews" :key="item.id">
+            <div class="review__item" v-show="++index == activeReviewNumber">
+              <div class="row">
+                <div class="col-12">
+                  <div class="review__profile">
+                    <div class="review__img_wrapper">
+                      <img class="review__img" :src="item['avatar']" alt="">
+                    </div>
+                    <div class="review__profile__desc">
+                      <div class="review__profile__name">{{ item['name'] }}</div>
+                      <div class="review__profile__rank">{{ item['source'] }}</div>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-xl-10">
-                    <div class="review__text" v-html="item['text']"></div>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-xl-10">
+                  <div class="review__text" v-html="item['text']"></div>
                 </div>
               </div>
-            </transition>
-          </div>
+            </div>
+          </transition>
         </div>
-
       </div>
     </div>
   </section>

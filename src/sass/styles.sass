@@ -8,29 +8,45 @@
 @import "typo-utilities"
 @import "utilities"
 
-@import "components/alerts"
-@import "components/badges"
-@import "components/borders"
-@import "components/buttons"
-@import "components/inputs"
-@import "components/link-underline"
-@import "components/tables"
+@import "ui/alerts"
+@import "ui/badges"
+@import "ui/borders"
+@import "ui/buttons"
+@import "ui/inputs"
+@import "ui/link-underline"
+@import "ui/tables"
 
-@import "theme/header"
+@import "components/accent-underline"
+@import "components/block-img-shift"
+@import "components/breadcrumbs"
+@import "components/blockquoter"
+@import "components/feat-item"
+@import "components/num-props"
+@import "components/slick-slider/slick"
+@import "components/slick-slider/slick-theme"
+@import "components/steps"
+
+@import "theme/header/header"
 @import "theme/footer"
-@import "theme/header-menu"
+@import "theme/header/header-menu"
+@import "theme/header/mobile-menu"
+@import "theme/header/top-bar-mobile"
 @import "theme/pages/front-page"
-
-
+@import "theme/pages/price"
 
 @import "shortcodes/consultation"
+@import "shortcodes/contacts"
 @import "shortcodes/portfolio"
 @import "shortcodes/reviews"
+@import "shortcodes/rhombus-contacts"
 
 html
   scroll-behavior: smooth
 
 body
-  background: $light-100 url('/img/ellipse-inner.svg') no-repeat
-  background-position: 100% 0
+  background: $gray-50 url('/img/ellipse-inner.svg') no-repeat 100% 0
 
+main#content
+  margin-top: 57px
+  @media (min-width: $lg)
+    margin-top: 0

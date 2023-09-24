@@ -1,0 +1,33 @@
+.step__item
+  background: $gray-100
+  padding: 30px 38px
+  border-radius: 6px
+  overflow: hidden
+  height: 100%
+  position: relative
+  &:after
+    position: absolute
+    z-index: 0
+    right: 0
+    bottom: -18px
+
+    color: $gray-200
+    font-size: 122px
+    font-weight: bold
+    font-family: $heading-font
+    line-height: 1
+
+  &.item_1::after
+    content: '01'
+  &.item_2::after
+    content: '02'
+  &.item_3::after
+    content: '03'
+  &.item_4::after
+    content: '04'
+
+  p
+    line-height: 140%
+    position: relative
+    z-index: 1
+//  .step__wrapper

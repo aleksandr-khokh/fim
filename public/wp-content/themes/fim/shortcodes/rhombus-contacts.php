@@ -1,6 +1,6 @@
 <?php
 /*
-[consult]
+[rhombus_contacts]
  */
 add_shortcode( 'rhombus_contacts', 'rhombus_contacts' );
 
@@ -14,7 +14,7 @@ function rhombus_contacts( $atts, $content ){
 
   <section id="rhombus-contacts">
     <div class="row">
-      <div class="col-12 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3">
         <div class="rhombus-contact__item">
           <div class="rhombus-contact__title"><h5>По вопросам печати</h5></div>
           <div class="rhombus-contact__info">
@@ -23,7 +23,7 @@ function rhombus_contacts( $atts, $content ){
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3">
         <div class="rhombus-contact__item">
           <div class="rhombus-contact__title"><h5>По вопросам пошива</h5></div>
           <div class="rhombus-contact__info">

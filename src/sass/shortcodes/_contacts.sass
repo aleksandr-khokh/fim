@@ -1,0 +1,57 @@
+#contacts
+  position: relative
+
+  .map-info__wrapper
+    position: absolute
+    top: 50px
+    background: white
+    width: 300px
+    @media (min-width: $sm)
+      width: 400px
+    @media (min-width: $lg)
+      width: 510px
+
+    .contact-info__title
+      @media (min-width: $sm)
+        border-bottom: 1px solid $gray-300
+      @media (min-width: $md)
+        padding: 60px 60px 35px
+
+  .contact-info__title,
+  .contact-card__body
+    padding: 20px
+    @media (min-width: $sm)
+      padding: 30px 50px
+
+  .contact-item
+    +flex-row-start
+    flex-wrap: wrap
+    margin-bottom: 10px
+    @media (min-width: $lg)
+      flex-wrap: nowrap
+
+    .contact-item__desc
+      +sm-text
+      color: $gray-400
+      width: 70px
+      @media (min-width: $lg)
+        width: 110px
+        flex-shrink: 0
+      @media (min-width: $xl)
+        width: 130px
+
+    .contact-item__value
+      color: $black
+      +sm-text
+      @media (min-width: $lg)
+        flex-grow: 0
+        flex-shrink: 1
+
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+    &__bottom
+      +sm-text
+

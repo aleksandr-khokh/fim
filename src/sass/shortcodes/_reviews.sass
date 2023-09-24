@@ -12,7 +12,9 @@
 
 #review
   margin-top: 100px
-  margin-bottom: 100px
+  margin-bottom: 50px
+  @media (min-width: $md)
+    margin-bottom: 100px
   button
     +reset-buttons
 
@@ -21,20 +23,13 @@
 
   .review__item__wrapper
     position: relative
-    top: 0
-    left: 0
-    height: 400px
-    @media (min-width: $md)
-      height: 220px
-    @media (min-width: $xl)
-      height: auto
 
   .review__item
     background: white
     border-radius: 2px
     width: 100%
     position: relative
-    padding: 45px 25px 25px
+    padding: 25px 20px
     @media (min-width: $md)
       padding: 40px 50px
     @media (min-width: $xl)
@@ -80,6 +75,8 @@
       +h3
       line-height: 1em
       margin-bottom: 0
+      @media (min-width: $sm)
+        font-size: calc(2rem + .6vw)
       @media (min-width: $md)
         +h2
         margin-bottom: 5px
@@ -126,8 +123,10 @@
   .review__img_wrapper
     box-sizing: content-box
     margin-right: 10px
+    max-width: 70px
     @media (min-width: $md)
       margin-right: 25px
+      max-width: none
 
   .review__img
     min-width: 57px

@@ -1,0 +1,43 @@
+.feat-item
+  background: white
+  border: 1px solid $rose-400
+  box-sizing: border-box
+  border-radius: 6px
+  padding: 8px
+  position: relative
+  text-align: center
+  height: 100%
+
+  .feat-item__wrap
+    background: $gray-100
+    border-radius: 3px
+    padding: 30px 15px 15px
+    height: 100%
+    font-size: 14px
+    line-height: 20px
+    text-align: center
+    color: #353535
+
+  .feat-item__icon
+    position: absolute
+    width: 58px
+    height: 58px
+    left: 50%
+    transform: translate(-50%, -50%)
+    top: 0
+    background: white
+    border: 1px solid $rose-400
+    box-sizing: border-box
+    border-radius: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    .bi::before
+      font-size: 28px
+
+  h6
+    margin-bottom: 15px
+
+  .feat-item__desc
+    +sm-text
+    margin-bottom: 0

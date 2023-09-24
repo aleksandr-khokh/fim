@@ -23,6 +23,8 @@ $includes = array(
 
   // SHORTCODES
   '/shortcodes/consult.php',
+  '/shortcodes/contacts.php',
+  '/shortcodes/icons.php',
   '/shortcodes/portfolio.php',
   '/shortcodes/reviews.php',
   '/shortcodes/rhombus-contacts.php',
@@ -39,8 +41,10 @@ $args = array(
     array( 'handle' => 'styles', 'src' => 'css/styles.css?1', 'deps' => array() ),
   ),
   'scripts' => array(
-    array( 'handle' => 'vue', 	 'src' => 'js/vue.js', 'deps' => array( 'jquery' ) ),
-    array( 'handle' => 'script', 'src' => 'js/script.js', 'deps' => array( 'jquery' ) ),
+    array( 'handle' => 'lottie',  'src' => 'js/assets/bodymovin.min.js', 'deps' => array( 'jquery' ) ),
+    array( 'handle' => 'vue', 	  'src' => 'js/assets/vue.js', 'deps' => array( 'jquery' ) ),
+    array( 'handle' => 'anime',   'src' => 'js/assets/anime.min.js', 'deps' => array( 'jquery' ) ),
+    array( 'handle' => 'script',  'src' => 'js/script.js', 'deps' => array( 'jquery' ) ),
   ),
   'nav_menus' => array(
     'header_menu' => __( 'Верхнее меню' ),
@@ -59,9 +63,9 @@ $args = array(
 $theme = new Theme_Class( $args );
 
 /* Подключение скриптов в хуки */
-//add_action( 'init', function(){
-//  wp_register_script( 'slick', get_template_directory_uri() . '/js/assets/slick.min.js', array('jquery'), '', true );
-//} );
+add_action( 'init', function(){
+  wp_register_script( 'slick', get_template_directory_uri() . '/js/assets/slick.min.js', array('jquery'), '', true );
+} );
 
 // Используется для телефона, чтобы оставить только цифры в номере
 function return_phone_from_string( $string ) {

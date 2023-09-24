@@ -1,0 +1,30 @@
+.dp_breadcrumb_main
+  margin-left: 45px
+  margin-top: 15px
+  margin-bottom: 15px
+  @media (min-width: $lg)
+    margin-top: 25px
+    margin-bottom: 25px
+
+  +sm-text
+  color: $gray-300
+
+  a
+    +sm-text
+    text-decoration: none
+    color: $gray-300
+    +transition(all)
+    border-bottom: 1px solid transparentize($black, 1)
+
+    &:hover
+      color: $black
+      +transition(all)
+      border-bottom: 1px solid $black
+
+  // Delimiter
+  .bi-arrow-right-short
+    font-size: 16px
+    display: inline-block
+    margin: auto 5px
+    @media (min-width: $sm)
+      font-size: 18px
