@@ -13,11 +13,11 @@ foreach( $options_keys as $key ) {
     <hr class="footer__divider">
     <div class="row">
 
-      <div class="offset-2 col-8 col-sm-4 offset-sm-0 col-xl-2 mb-5">
+      <div class="offset-2 col-8 col-sm-4 offset-sm-0 col-lg-3 col-xl-2 mb-5">
         <a href="/" title="Московская мастерская шитья, вышивки и печати"><img src="/img/brandbook/logo-desc-bottom-right.svg" alt="Московская мастерская шитья, вышивки и печати"></a>
       </div>
 
-      <div class="col-12 col-sm-8 col-xl-4">
+      <div class="col-12 col-sm-8 col-lg-5 col-xl-4">
         <div class="footer__menu-wrapper">
           <?php
           $menu_left = wp_nav_menu(
@@ -54,9 +54,7 @@ foreach( $options_keys as $key ) {
           ?>
         </div>
       </div>
-      <div class="col-12 col-xl-3 offset-xl-1">
-
-
+      <div class="col-12 col-lg-3 offset-lg-1 col-xl-3">
         <div class="row">
           <div class="col-12 col-sm-5 col-md-12">
             <address><i class="bi bi-geo-alt"></i> <?= $options[ 'address' ] ?></address>

@@ -6,7 +6,10 @@
 
     <main id="content" role="main">
        <div class="container">
-         <h1 class="text-center my-100"><?php the_title();?></h1>
+         <h1 class="text-center my-md-100"><?php the_title();?></h1>
+         <?php if(!is_front_page() && function_exists('dp_breadcrumb')){
+           echo dp_breadcrumb();
+         } ?>
 <!--         <section class="hero">-->
 <!--           <div class="row">-->
 <!--             <div class="col-12 col-xl-6">-->

@@ -98,6 +98,4 @@ foreach($options_keys as $key ) {
   </div>
 </header>
 
-<?php if(!is_front_page() && function_exists('dp_breadcrumb')){ ?>
-  <div class="container"><?= dp_breadcrumb(); ?></div>
-<?php } ?>
+

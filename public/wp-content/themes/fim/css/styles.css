@@ -1684,14 +1684,23 @@ h1, .h1 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(2.375rem + 1.5vw);
   letter-spacing: -0.03em;
   margin-top: 0.5rem;
   margin-bottom: 0.75em;
 }
 @media (min-width: 1400px) {
   h1, .h1 {
-    font-size: 4.5rem;
+    font-size: 6.5rem;
+  }
+}
+
+h1 {
+  color: white;
+}
+@media (min-width: 1024px) {
+  h1 {
+    color: var(--black);
   }
 }
 
@@ -1699,7 +1708,7 @@ h2, .h2, .portfolio .menu-heading {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(2.325rem + 0.9vw);
   letter-spacing: 0.015em;
 }
 @media (min-width: 1400px) {
@@ -4333,7 +4342,7 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   border-left: none !important;
 }
 
-.button_with_arrow, #consultation .consultation__button_send, .send-order__button_send, .btn-blue-rounded, .btn {
+.button_with_arrow, #consultation .consultation__button_send, .services__item .services__item__button, .send-order__button_send, .btn-blue-rounded, .btn {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -4349,10 +4358,10 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   font-size: 1.75rem;
   letter-spacing: 0.015em;
 }
-.button_with_arrow:hover, #consultation .consultation__button_send:hover, .send-order__button_send:hover, .btn-blue-rounded:hover, .btn:hover {
+.button_with_arrow:hover, #consultation .consultation__button_send:hover, .services__item .services__item__button:hover, .send-order__button_send:hover, .btn-blue-rounded:hover, .btn:hover {
   text-decoration: none;
 }
-.button_with_arrow:focus, #consultation .consultation__button_send:focus, .send-order__button_send:focus, .btn-blue-rounded:focus, .btn:focus {
+.button_with_arrow:focus, #consultation .consultation__button_send:focus, .services__item .services__item__button:focus, .send-order__button_send:focus, .btn-blue-rounded:focus, .btn:focus {
   outline: none;
 }
 
@@ -4386,24 +4395,24 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   background-color: #7f1d1d;
 }
 
-.button_with_arrow, #consultation .consultation__button_send, .send-order__button_send {
+.button_with_arrow, #consultation .consultation__button_send, .services__item .services__item__button, .send-order__button_send {
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 1;
 }
 @media (min-width: 768px) {
-  .button_with_arrow, #consultation .consultation__button_send, .send-order__button_send {
+  .button_with_arrow, #consultation .consultation__button_send, .services__item .services__item__button, .send-order__button_send {
     padding: 0;
     height: 56px;
   }
 }
-.button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
+.button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .services__item .services__item__button .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .services__item .services__item__button .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .services__item .services__item__button .arrow_for_next_button, .services__item .services__item__button #consultation .consultation__button_send__arrow, #consultation .services__item .services__item__button .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
   display: none;
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
-    display: block;
+  .button_with_arrow .arrow_for_button, #consultation .consultation__button_send .arrow_for_button, .services__item .services__item__button .arrow_for_button, .send-order__button_send .arrow_for_button, .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .services__item .services__item__button .arrow_for_back_button, .send-order__button_send .arrow_for_back_button, .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .services__item .services__item__button .arrow_for_next_button, .services__item .services__item__button #consultation .consultation__button_send__arrow, #consultation .services__item .services__item__button .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
+    display: inline-block;
     box-sizing: content-box;
     position: absolute;
     top: 0;
@@ -4413,13 +4422,13 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   }
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
+  .button_with_arrow .arrow_for_next_button, .button_with_arrow #consultation .consultation__button_send__arrow, #consultation .button_with_arrow .consultation__button_send__arrow, #consultation .consultation__button_send .arrow_for_next_button, #consultation .consultation__button_send .consultation__button_send__arrow, .services__item .services__item__button .arrow_for_next_button, .services__item .services__item__button #consultation .consultation__button_send__arrow, #consultation .services__item .services__item__button .consultation__button_send__arrow, .send-order__button_send .arrow_for_next_button, .send-order__button_send #consultation .consultation__button_send__arrow, #consultation .send-order__button_send .consultation__button_send__arrow {
     right: 0;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 @media (min-width: 768px) {
-  .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .send-order__button_send .arrow_for_back_button {
+  .button_with_arrow .arrow_for_back_button, #consultation .consultation__button_send .arrow_for_back_button, .services__item .services__item__button .arrow_for_back_button, .send-order__button_send .arrow_for_back_button {
     left: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -4896,7 +4905,6 @@ table.table-bordered > :not(caption) > * > * {
 }
 
 .dp_breadcrumb_main {
-  margin-left: 45px;
   margin-top: 15px;
   margin-bottom: 15px;
   font-weight: 500;
@@ -4972,7 +4980,12 @@ blockquote.blockquote .blockoute__author {
   padding: 8px;
   position: relative;
   text-align: center;
-  height: 100%;
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .feat-item {
+    height: 100%;
+  }
 }
 .feat-item .feat-item__wrap {
   background: #f3f4f6;
@@ -5006,16 +5019,8 @@ blockquote.blockquote .blockoute__author {
   margin-bottom: 15px;
 }
 .feat-item .feat-item__desc {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 150%;
+  font-size: 15px;
   margin-bottom: 0;
-}
-@media (min-width: 1400px) {
-  .feat-item .feat-item__desc {
-    font-size: 15px;
-    line-height: 160%;
-  }
 }
 
 @media (min-width: 768px) {
@@ -5315,8 +5320,13 @@ blockquote.blockquote .blockoute__author {
   padding: 30px 38px;
   border-radius: 6px;
   overflow: hidden;
-  height: 100%;
   position: relative;
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  .step__item {
+    height: 100%;
+  }
 }
 .step__item:after {
   position: absolute;
@@ -5342,6 +5352,7 @@ blockquote.blockquote .blockoute__author {
   content: "04";
 }
 .step__item p {
+  font-size: 21px;
   line-height: 140%;
   position: relative;
   z-index: 1;
@@ -5782,12 +5793,126 @@ body.home {
 .price__item {
   background: white;
   border-radius: 6px;
-  overflow: hidden;
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 25px;
+  margin-bottom: 70px;
+}
+@media (min-width: 576px) {
+  .price__item {
+    padding: 20px 0;
+  }
 }
 .price__item .price__title {
-  font-size: 27px;
+  font-size: 47px;
   text-align: center;
+  margin-bottom: 0;
+}
+@media (min-width: 576px) {
+  .price__item .price__title {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+}
+.price__item .price__value__wrapper {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -25px;
+  margin-left: -25px;
+}
+@media (min-width: 768px) {
+  .price__item .price__value__wrapper {
+    margin-left: 0;
+  }
+}
+.price__item .price__value {
+  display: inline-block;
+  background: var(--accent);
+  font-size: 32px;
+  padding: 10px 25px;
+  transform: skewX(160deg);
+  border-radius: 10px 18px;
+  box-shadow: 0 5px 10px 0 rgba(8, 8, 9, 0.17);
+}
+@media (min-width: 768px) {
+  .price__item .price__value {
+    padding: 12px 25px;
+    transform: skewX(155deg);
+  }
+}
+@media (min-width: 1400px) {
+  .price__item .price__value {
+    padding: 10px 20px;
+    font-size: 27px;
+  }
+}
+.price__item .price__value span {
+  color: white;
+  display: inline-block;
+  transform: skewX(-160deg);
+}
+@media (min-width: 768px) {
+  .price__item .price__value span {
+    transform: skewX(-155deg);
+  }
+}
+
+.services__item {
+  padding: 25px;
+  background: var(--white);
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .services__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .services__item {
+    min-height: 350px;
+  }
+}
+.services__item.poshiv {
+  background: white url(/img/services/2057252297.png) no-repeat;
+  background-position: 0 100%;
+}
+.services__item .services__item__title {
+  font-size: 30px;
+}
+.services__item .services__item__button {
+  border-radius: 30px;
+  grid-area: button;
+  background: var(--accent);
+  color: var(--white);
+}
+.services__item .services__item__button:hover {
+  background: #f50019;
+}
+.services__item .services__item__button:focus {
+  background: #ff5c6d;
+}
+.services__item .services__item__button_send__arrow {
+  display: none;
+  top: 5px;
+  padding: 21px 15px;
+}
+@media (min-width: 768px) {
+  .services__item .services__item__button_send__arrow {
+    display: inline-block;
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    height: 14px;
+    width: 7px;
+    padding: 21px 35px;
+    right: 0;
+  }
 }
 
 #consultation {
@@ -5827,6 +5952,11 @@ body.home {
 }
 @media (min-width: 768px) {
   #consultation .consultation__wrapper {
+    padding: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #consultation .consultation__wrapper {
     padding: 50px 80px 50px;
   }
 }
@@ -5840,19 +5970,9 @@ body.home {
   padding-right: 15px;
 }
 #consultation .consultation__heading {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 600;
   font-size: calc(1.375rem + 1.5vw);
-  letter-spacing: -0.03em;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75em;
+  font-weight: bold;
   margin-bottom: 15px;
-}
-@media (min-width: 1400px) {
-  #consultation .consultation__heading {
-    font-size: 4.5rem;
-  }
 }
 @media (min-width: 768px) {
   #consultation .consultation__heading {
@@ -5897,12 +6017,6 @@ body.home {
   margin-bottom: 12px;
 }
 @media (min-width: 768px) {
-  #consultation .consultation__input_name,
-  #consultation .consultation__input_phone {
-    margin-bottom: 25px;
-  }
-}
-@media (min-width: 1400px) {
   #consultation .consultation__input_name,
   #consultation .consultation__input_phone {
     margin-bottom: 0;
@@ -6630,7 +6744,7 @@ body.home {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: calc(2.325rem + 0.9vw);
     letter-spacing: 0.015em;
     margin-bottom: 5px;
   }
@@ -6785,11 +6899,11 @@ body.home {
 #rhombus-contacts .rhombus-contact__title {
   background: #1C1E23;
   position: relative;
+  z-index: 2;
   padding: 15px 0;
   margin: 0 25px;
   transform: skewX(160deg);
   border-radius: 10px 18px;
-  z-index: 2;
   box-shadow: 0 5px 10px 0 rgba(8, 8, 9, 0.17);
 }
 @media (min-width: 768px) {

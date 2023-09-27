@@ -3,8 +3,11 @@
   padding: 30px 38px
   border-radius: 6px
   overflow: hidden
-  height: 100%
   position: relative
+  margin: 10px 0
+  @media (min-width: $md)
+    height: 100%
+
   &:after
     position: absolute
     z-index: 0
@@ -27,7 +30,10 @@
     content: '04'
 
   p
+    font-size: 21px
     line-height: 140%
     position: relative
     z-index: 1
+
+
 //  .step__wrapper

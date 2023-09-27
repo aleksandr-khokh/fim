@@ -6,7 +6,9 @@
   padding: 8px
   position: relative
   text-align: center
-  height: 100%
+  margin: 20px 0
+  @media (min-width: $md)
+    height: 100%
 
   .feat-item__wrap
     background: $gray-100
@@ -39,5 +41,5 @@
     margin-bottom: 15px
 
   .feat-item__desc
-    +sm-text
+    font-size: 15px
     margin-bottom: 0
