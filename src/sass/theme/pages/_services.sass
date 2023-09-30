@@ -1,12 +1,17 @@
 .services__item
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   padding: 25px
   background: var(--white)
   border-radius: 6px
   overflow: hidden
+  min-height: 300px
+  margin-bottom: 30px
+  +shadow
   @media (min-width: $md)
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+    min-height: 350px
+  @media (min-width: $lg)
     height: 100%
   @media (min-width: $xl)
     min-height: 350px
@@ -14,11 +19,28 @@
   &.poshiv
     background: white url(/img/services/2057252297.png) no-repeat
     background-position: 0 100%
-  // .services__item__title
 
+  &.pechat
+    background: white url(/img/services/2325680049.png) no-repeat
+    background-position: 100% 100%
+
+  &.vishivka
+    background: white url(/img/services/1338568760.png) no-repeat
+    background-position: 0 100%
+
+  &.construct
+    background: white url(/img/services/2300082967.png) no-repeat
+    background-position: 100% 100%
+
+    .services__item__title
+      @media (min-width: $sm)
+        font-size: 21px
+      @media (min-width: $md)
+        font-size: 30px
 
   .services__item__title
-    font-size: 30px
+    @media (min-width: $md)
+      font-size: 30px
 
   .services__item__button
     @extend .button_with_arrow
@@ -44,3 +66,60 @@
       width: 7px
       padding: 21px 35px
       right: 0
+
+#poshiv-content,
+#pechat-content,
+#vishivka-content,
+#construct-content,
+#dtf-content,
+#thermoperenos-content,
+#shelkographia-content,
+#sublimation-content
+  max-width: $lg
+  border-radius: 6px
+  padding: 30px 20px
+  @media (min-width: $md)
+    padding: 44px
+
+#poshiv-content,
+#vishivka-content,
+#sublimation-content
+  max-width: $md
+
+#poshiv-content
+  background: white url("/img/services/poshiv-bg.png") no-repeat
+  background-position: 0 100%
+
+#pechat-content
+  @media (min-width: $md)
+    background: white url("/img/services/pechat-bg.png") no-repeat
+    background-position: 0 100%
+
+#vishivka-content
+  background: white url("/img/services/vishivka-bg.png") no-repeat
+  background-position: 0 100%
+
+#construct-content
+  @media (min-width: $md)
+    background: white url("/img/services/construct-bg.png") no-repeat
+    background-position: 0 100%
+
+#dtf-content
+  @media (min-width: $md)
+    background: white url("/img/services/dtf-bg.png") no-repeat
+    background-position: 0 calc(100% - 30px)
+
+#thermoperenos-content
+  @media (min-width: $md)
+    background: white url("/img/services/thermoperenos-bg.png") no-repeat
+    background-position: 0 100%
+
+#shelkographia-content
+  @media (min-width: $md)
+    background: white url("/img/services/shelkographia-bg.png") no-repeat
+    background-position: 0 100%
+
+#sublimation-content
+  background: white url("/img/services/sublimation-bg.png") no-repeat
+  background-position: 0 100%
+

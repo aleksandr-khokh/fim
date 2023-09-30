@@ -12,11 +12,13 @@
     height: 390px
     position: absolute
     top: 100px
-    right: -150px
+    right: 0
     z-index: -1
     display: none
-    @media (min-width: $lg)
+    @media (min-width: $xl)
       display: block
+    @media (min-width: 1750px)
+      right: -150px
 
   .consultation__wrapper
     +shadow

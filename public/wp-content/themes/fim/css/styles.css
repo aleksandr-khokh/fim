@@ -3552,6 +3552,18 @@ ul.list-inline li {
     padding-left: 3rem !important;
   }
 }
+.my-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .my-md-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
 .my-100 {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -5860,16 +5872,24 @@ body.home {
 }
 
 .services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 25px;
   background: var(--white);
   border-radius: 6px;
   overflow: hidden;
+  min-height: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 9px 40px 0 rgba(8, 8, 9, 0.05);
 }
 @media (min-width: 768px) {
   .services__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-height: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .services__item {
     height: 100%;
   }
 }
@@ -5882,8 +5902,32 @@ body.home {
   background: white url(/img/services/2057252297.png) no-repeat;
   background-position: 0 100%;
 }
-.services__item .services__item__title {
-  font-size: 30px;
+.services__item.pechat {
+  background: white url(/img/services/2325680049.png) no-repeat;
+  background-position: 100% 100%;
+}
+.services__item.vishivka {
+  background: white url(/img/services/1338568760.png) no-repeat;
+  background-position: 0 100%;
+}
+.services__item.construct {
+  background: white url(/img/services/2300082967.png) no-repeat;
+  background-position: 100% 100%;
+}
+@media (min-width: 576px) {
+  .services__item.construct .services__item__title {
+    font-size: 21px;
+  }
+}
+@media (min-width: 768px) {
+  .services__item.construct .services__item__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .services__item .services__item__title {
+    font-size: 30px;
+  }
 }
 .services__item .services__item__button {
   border-radius: 30px;
@@ -5915,6 +5959,87 @@ body.home {
   }
 }
 
+#poshiv-content,
+#pechat-content,
+#vishivka-content,
+#construct-content,
+#dtf-content,
+#thermoperenos-content,
+#shelkographia-content,
+#sublimation-content {
+  max-width: 1024px;
+  border-radius: 6px;
+  padding: 30px 20px;
+}
+@media (min-width: 768px) {
+  #poshiv-content,
+  #pechat-content,
+  #vishivka-content,
+  #construct-content,
+  #dtf-content,
+  #thermoperenos-content,
+  #shelkographia-content,
+  #sublimation-content {
+    padding: 44px;
+  }
+}
+
+#poshiv-content,
+#vishivka-content,
+#sublimation-content {
+  max-width: 768px;
+}
+
+#poshiv-content {
+  background: white url("/img/services/poshiv-bg.png") no-repeat;
+  background-position: 0 100%;
+}
+
+@media (min-width: 768px) {
+  #pechat-content {
+    background: white url("/img/services/pechat-bg.png") no-repeat;
+    background-position: 0 100%;
+  }
+}
+
+#vishivka-content {
+  background: white url("/img/services/vishivka-bg.png") no-repeat;
+  background-position: 0 100%;
+}
+
+@media (min-width: 768px) {
+  #construct-content {
+    background: white url("/img/services/construct-bg.png") no-repeat;
+    background-position: 0 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #dtf-content {
+    background: white url("/img/services/dtf-bg.png") no-repeat;
+    background-position: 0 calc(100% - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  #thermoperenos-content {
+    background: white url("/img/services/thermoperenos-bg.png") no-repeat;
+    background-position: 0 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #shelkographia-content {
+    background: white url("/img/services/shelkographia-bg.png") no-repeat;
+    background-position: 0 100%;
+  }
+}
+
+#sublimation-content {
+  background: white url("/img/services/sublimation-bg.png") no-repeat;
+  background-position: 0 100%;
+}
+
 #consultation {
   position: relative;
   margin-top: 50px;
@@ -5932,13 +6057,18 @@ body.home {
   height: 390px;
   position: absolute;
   top: 100px;
-  right: -150px;
+  right: 0;
   z-index: -1;
   display: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   #consultation::after {
     display: block;
+  }
+}
+@media (min-width: 1750px) {
+  #consultation::after {
+    right: -150px;
   }
 }
 #consultation .consultation__wrapper {

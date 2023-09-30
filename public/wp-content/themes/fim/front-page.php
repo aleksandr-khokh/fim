@@ -56,7 +56,7 @@ if ( have_posts() ):
         <!--          <div class="col-12 col-md-3"><img src="/img/about/EPRINT277309 1.png" alt=""></div>-->
         <!--        </div>-->
 
-        <?php // echo do_shortcode( '[portfolio]' ); ?>
+        <?php echo do_shortcode( '[portfolio]' ); ?>
         <?php echo do_shortcode( '[reviews]' ); ?>
 
       </div>
