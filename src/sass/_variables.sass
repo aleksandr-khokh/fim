@@ -28,7 +28,16 @@ $transition: cubic-bezier(.35, 0, 0, 1.01)
 =transition( $property )
   transition: $property .5s $transition
 
+.fade-enter-active,
+.fade-leave-active
+  transition: opacity 0.5s ease
+
+.fade-enter-from,
+.fade-leave-to
+  opacity: 0
+
 // ОТСТУПЫ
 $spacer: 1rem !default
 $spacers: () !default
 $spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer *  1.5), 5: ($spacer * 3)  ), $spacers )
+

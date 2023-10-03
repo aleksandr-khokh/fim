@@ -1,9 +1,3 @@
-.portfolio__title
-  font-size: 26px
-  margin-bottom: 20px
-  @media (min-width: $md)
-    font-size: 70px
-
 .portfolio
   margin-top: 30px
   margin-bottom: 10px
@@ -15,235 +9,123 @@
     margin-top: 100px
     margin-bottom: 150px
 
-  .separator
-    margin-top: 65px
-    margin-bottom: 50px
-    @extend .md-text
-    font-weight: bold
-    color: $gray-300
-
-    @media (max-width: $md)
-      position: relative
-      top: 110px
-
-  .menu-heading
-    @extend .h2
-    @media (max-width: $sm)
-      text-align: left
-      padding-left: 27px
-    @media (min-width: $xl)
-      margin-top: 130px
-      margin-left: 203px
-    &:before
-      left: calc( 50% - 190px)
-      @media (min-width: $xl)
-        left: calc( 50% - 90px)
-        margin-top: -100px
-      @media (max-width: $xl)
-        width: 128px
-        height: 165px
-        margin-top: -20px
-        margin-left: 100px
-      @media (max-width: $sm)
-        margin-left: 30px
-
-    .first
-      @media (min-width: $xl)
-        line-height: 10px
-    .second
-      @media (min-width: $xl)
-        margin-left: 100px
-
-      @media (max-width: $xl)
-        margin-top: -15px
-        margin-left: 125px
-
-      @media (max-width: $sm)
-        margin-left: 45px
-
-  .menu-heading-desc
-    margin-top: 150px
-    @media (max-width: $xl)
-      margin-top: 50px
-      font-size: 14px
-      margin-left: 25px
-
-    &:before
-      // @extend .rhombus
-      margin-left: -57px
-      opacity: 0.2
-      @media (max-width: $xl)
-        margin-left: -25px
+  .portfolio__title
+    font-size: 32px
+    margin-bottom: 20px
+    @media (min-width: $sm)
+      font-size: 26px
+    @media (min-width: $md)
+      font-size: 70px
 
 // СЛАЙДЕР МЕНЮ
 #menu-slider
   display: flex
-  margin-top: 80px
+  flex-direction: column
   @media (min-width: $xl)
-    margin-left: 100px
-  @media (max-width: $xl)
-    margin-top: 35px
-    flex-direction: column
-    margin-bottom: 75px
+    flex-direction: row
 
   .menu-categories
     display: flex
-    flex-direction: column
-    text-align: center
+    flex-direction: row
+    justify-content: space-around
     @media (min-width: $xl)
+      text-align: center
+      flex-direction: column
       margin: auto
       width: 220px
-    @media (max-width: $xl)
-      flex-direction: row
-      justify-content: space-around
-
-    .menu-cat
-      margin-bottom: 20px
-      color: $gray-500
-      text-decoration: none
-      cursor: pointer
-      font-size: 1.5rem
-
-      &:hover
-        text-decoration: none
-        font-weight: 600
-        color: $black
-
-      &.active
-        font-weight: 600
-        color: $black
 
     .menu-item-nav
       display: none
       @media (min-width: $xl)
         display: block
-
-      &.prev
-        // @extend .button-rhombus
-        margin-bottom: 60px
-        button:before
-          background: url("/img/icons/rhombus-for-arrow-up.svg") no-repeat
-          margin-top: -25px
-          margin-left: -33px
-
-      &.next
-        // @extend .button-rhombus
         margin-top: 30px
-        button:before
-          background: url("/img/icons/rhombus-for-arrow-down.svg") no-repeat
-          margin-left: -33px
+        margin-bottom: 30px
+        +transition(transform)
+      &:hover
+        transform: scale(1.2)
+        +transition(transform)
 
-  .hr-menu-mobile-after
-    @media(max-width: $xl)
-      border: 1px solid $gray-500
+    .menu-cat__link__wrapper
+      +flex-row-sb
       width: 100%
-      margin: 0 auto 30px
+      border-bottom: 2px solid $gray-300
+      padding-bottom: 10px
+      @media (min-width: $md)
+        padding-bottom: 0
+        border-bottom: none
+        flex-direction: column
+
+      .menu-cat__link
+        cursor: pointer
+        +transition(color)
+
+        &:not(:last-child)
+          @media (min-width: $md)
+            margin-bottom: 20px
+
+        &:hover
+          color: var(--accent)
+          +transition(color)
+
+        &.active
+          font-weight: 700
 
   .menu-content
     display: flex
-    flex-direction: row
-    @media (max-width: $xl)
-      height: 200px
-    @media (max-width: $md)
-      flex-direction: column
+    flex-direction: column
+    @media (min-width: $md)
+      flex-direction: row
 
-    .menu-desc-nav
-      display: none
-      @media (max-width: $xl)
-        display: block
-        z-index: 1
-
-  .menu-photos
-    @media (min-width: $xl)
-      width: 712px
-      height: 650px
-    @media (max-width: $xl)
-      display: flex
-      justify-content: space-between
-      align-items: flex-end
-      min-width: 200px
-    @media (max-width: $md)
-      height: 200px
-      margin-top: 170px
-
-    .menu-photo
-      opacity: 0
-      position: absolute
+  .menu-photo__wrapper
+    +flex-row-sb
+    align-items: end
+    border-radius: 6px
+    @media (min-width: $md)
+      background: white
       display: block
-      @media (max-width: $md)
-        width: 200px
-        left: calc( 50% - 100px )
-        margin: 20px auto auto
-      @media (max-width: $sm)
-        left: calc(50% - 100px)
-        margin-top: 30px
-
-      &.active
-        display: block
-        opacity: 1
-        transition: all 300ms cubic-bezier(.35, 0, 0, 1.01)
-
-      .menu-photo-big
-        border-radius: 4px
-        box-shadow: 0 11px 26px rgba(0, 0, 0, 0.07)
-        @media (max-width: $xl)
-          display: none
-      .menu-photo-small
-        @media (min-width: $xl)
-          display: none
+      +shadow
 
     .menu-desc-nav
-      // @extend .button-rhombus
-      .prev, .next
-        img
-          opacity: 0.5
-        &:hover img
-          opacity: 1
-      .prev
-        @media (max-width: $md)
-          margin-left: 30px
-      .next
-        @media (max-width: $md)
-          margin-right: 30px
-
-      .prev:before
-        background: url("/img/icons/icon-arrow-rhombus.svg") no-repeat
-        margin-top: -25px
-        margin-left: -33px
-        opacity: 0.81
-
-      .next:before
-        background: url("/img/icons/icon-arrow-rhombus.svg") no-repeat
-        margin-left: -37px
-        margin-top: -24px
-        opacity: 0.81
+      flex-shrink: 0
+      @media (min-width: $md)
+        display: none
 
   .menu-desc-wrapper
-    z-index: 10
     @media (min-width: $xl)
-      padding: 50px 0
-      width: 420px
-    @media (max-width: $xl)
-      margin-left: 125px
-      width: 100%
-    @media (max-width: $md)
-      margin-top: 30px
-      margin-left: 0
-
-  .menu-desc-header
-    @media (max-width: $xl)
+      height: 100%
       display: flex
-      flex-direction: row-reverse
-      justify-content: space-between
+      align-items: center
 
   .menu-desc
-    background: white
+    +shadow
+    background: transparent
+    position: relative
+    z-index: 5
+    left: -40px
+    padding: 50px
+    border-radius: 6px
     width: 100%
     @media (min-width: $xl)
-      height: 350px
-      padding: 30px
-    @media (max-width: $xl)
-      background: transparent
+      background: white
+
+    hr
+      margin-bottom: 35px
+      width: 400px
+      @media (min-width: $xl)
+        width: auto
+
+    .heading
+      margin-bottom: 5px
+      +h3
+      @media (min-width: $md)
+        margin: 20px auto
+      @media (min-width: $xl)
+        +h4
+
+    .heading__desc
+      color: $dark
+      @extend .sm-text
+      font-weight: 600
 
     .menu-desc-nav
       display: flex
@@ -255,12 +137,12 @@
         display: inline-block
         border: none
         background: none
-        transition: opacity 300ms cubic-bezier(.35, 0, 0, 1.01)
+        +transition(opacity)
         @media (max-width: $xl)
           display: none
         &:hover
+          +transition(opacity)
           opacity: 1
-          transition: opacity 300ms cubic-bezier(.35, 0, 0, 1.01)
 
       .prev
         margin-right: 9px
@@ -281,55 +163,14 @@
       .divider
         color: $gray-300
 
-
-    .header
-      margin: 20px auto
-      display: none
-      @extend .h4
-      @media (max-width: $xl)
-        +h3
-      @media (max-width: $md)
-        margin-bottom: 5px
-      &.active
-        display: block
-
-    .energy
-      color: $dark
-      @extend .sm-text
-      font-weight: 600
-      opacity: 0
-      position: absolute
-      display: block
-      &.active
-        display: block
-        opacity: 1
-        transition: all 300ms cubic-bezier(.35, 0, 0, 1.01)
-
-    hr
-      margin-top: 75px
-      margin-bottom: 35px
-      width: 400px
-      @media (min-width: $xl)
-        width: auto
-
-    .dishes-desc
+    .menu-desc-body
       @extend .sm-text
       font-weight: 300
-      opacity: 0
-      position: absolute
       display: none
+      margin-top: 30px
       @media (min-width: $xl)
         display: block
         width: 360px
-      @media (max-width: $xl)
-        width: 620px
-        margin-top: 30px
-      @media (max-width: $lg)
-        width: 370px
-      @media (max-width: $md)
-        width: 345px
-        max-width: calc(100vw - 30px)
-      &.active
-        display: block
-        opacity: 1
-        transition: all 300ms cubic-bezier(.35, 0, 0, 1.01)
+
+
+

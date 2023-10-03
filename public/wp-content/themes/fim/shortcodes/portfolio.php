@@ -12,7 +12,7 @@ function portfolio ( $atts, $content ){
 
   add_action( 'wp_print_footer_scripts', function(){
     echo '<script>
-const dishes = new Vue({
+const portfolio = new Vue({
     el: \'#menu-slider\',
     data: {
       activeCat: 1,
@@ -22,22 +22,19 @@ const dishes = new Vue({
               header: "Худи с капюшоном",
                 desc: "<p>Мы используем футер 320-340 гр.<br>Много вариантов оттенков и фактуры</p>",
                 energy: "Тираж от 300 штук",
-                bigimg: "/img/portfolio/hudi.jpg",
-                smallimg: "/img/restaurant/menu/hot/IMG_1536_kartoshka-min.png",
+                bigimg: "/img/portfolio/hudi.png",
             },
             {
               header: "Сумки",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/hot/IMG_1562_ryba.jpg",
-                smallimg: "/img/restaurant/menu/hot/IMG_1562_ryba-min.png",
             },
             {
               header: "Худи",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/hot/IMG_1563_ryba.jpg",
-                smallimg: "/img/restaurant/menu/hot/IMG_1563_ryba-min.png",
             },
         ],
         soups: [
@@ -46,21 +43,18 @@ const dishes = new Vue({
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/soups/IMG_1503_sup-hleb.jpg",
-                smallimg: "/img/restaurant/menu/soups/IMG_1503_sup-hleb-min.png",
             },
             {
               header: "Суп с морепродуктами",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/soups/IMG_1517_moreproducty.jpg",
-                smallimg: "/img/restaurant/menu/soups/IMG_1517_moreproducty-min.png",
             },
             {
               header: "Суп с морковью",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/soups/IMG_1518_morkov.jpg",
-                smallimg: "/img/restaurant/menu/soups/IMG_1518_morkov-min.png",
             },
         ],
         deserts: [
@@ -69,35 +63,30 @@ const dishes = new Vue({
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/deserts/IMG_1416-syrniki.jpg",
-                smallimg: "/img/restaurant/menu/deserts/IMG_1416-syrniki-min.png",
             },
             {
               header: "Вафли",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/deserts/IMG_1429-vafli-syrniki.jpg",
-                smallimg: "/img/restaurant/menu/deserts/IMG_1429-vafli-syrniki-min.png",
             },
             {
               header: "Штрудель",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/deserts/IMG_1458-shtrudel.jpg",
-                smallimg: "/img/restaurant/menu/deserts/IMG_1458-shtrudel-min.png",
             },
             {
               header: "Щербет",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/deserts/IMG_1479-sherbet.jpg",
-                smallimg: "/img/restaurant/menu/deserts/IMG_1479-sherbet-min.png",
             },
             {
               header: "Ананас",
                 desc: "",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/deserts/IMG_1496_ananas.jpg",
-                smallimg: "/img/restaurant/menu/deserts/IMG_1496_ananas-min.png",
             },
         ],
         salads: [
@@ -106,7 +95,6 @@ const dishes = new Vue({
                 desc: "Хамон",
                 energy: "368",
                 bigimg: "/img/restaurant/menu/salads/IMG_1523_hamon.jpg",
-                smallimg: "/img/restaurant/menu/salads/IMG_1523_hamon-min.png",
             },
         ],
    },
@@ -122,6 +110,17 @@ const dishes = new Vue({
           return this.salads.length;
         }
       },
+      productsData: function (  ){
+        if( this.activeCat === 1 ){
+          return this.main;
+        } else if (this.activeCat === 2 ) {
+          return this.soups;
+        } else if (this.activeCat === 3 ) {
+          return this.deserts;
+        } else if (this.activeCat === 4 ) {
+          return this.salads;
+        }
+      }
     },
     methods: {
       prevCat: function(){
@@ -176,200 +175,62 @@ const dishes = new Vue({
         </div>
       </div>
     </div>
+
     <div id="menu-slider">
       <div class="menu-categories">
-        <div class="menu-item-nav prev">
-          <button @click="prevCat"><img src="/img/icons/icon-arrow-up-black.svg" alt=""></button>
+
+        <button class="menu-item-nav" @click="prevCat"><img src="/img/icons/rhombus-arrow-up-bronze.svg" alt=""></button>
+
+        <div class="menu-cat__link__wrapper">
+          <div class="menu-cat__link" :class="{active : activeCat == 1}" @click="activeCat = 1">Пошив</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 2}" @click="activeCat = 2">Печать</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 3}" @click="activeCat = 3">Вышивка</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 4}" @click="activeCat = 4">Разработка</div>
         </div>
 
-        <div class="menu-cat" :class="{active : activeCat == 1}" @click="activeCat = 1">Пошив</div>
-        <div class="menu-cat" :class="{active : activeCat == 2}" @click="activeCat = 2">Печать</div>
-        <div class="menu-cat" :class="{active : activeCat == 3}" @click="activeCat = 3">Вышивка</div>
-        <div class="menu-cat" :class="{active : activeCat == 4}" @click="activeCat = 4">Разработка</div>
+        <button class="menu-item-nav" @click="nextCat"><img src="/img/icons/rhombus-arrow-down-bronze.svg" alt=""></button>
 
-        <div class="menu-item-nav next">
-          <button @click="nextCat"><img src="/img/icons/icon-arrow-down-black.svg" alt=""></button>
-        </div>
       </div><!-- menu-categories -->
-      <hr class="hr-menu-mobile-after">
 
-      <div class="menu-content main" v-if="activeCat == 1">
-        <div class="menu-photos">
-          <div class="menu-desc-nav">
-            <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt=""></button>
+      <div class="menu-content main">
+        <div class="menu-photo__wrapper">
+          <button class="menu-desc-nav prev" @click="prevItem"><img src="/img/icons/icon-review-button-left.svg" alt=""></button>
+
+          <div class="menu-photo" v-for="(item, index) in productsData" :class="{ active: activeItem === ++index }">
+            <transition name="fade">
+              <img :src="item['bigimg']" alt="" v-show="activeItem === index">
+            </transition>
           </div>
 
-          <div class="menu-photo" v-for="(item, index) in main" :class="{ active: activeItem === ++index }">
-            <img class="menu-photo-big" :src="item['bigimg']" alt="">
-            <img class="menu-photo-small" :src="item['smallimg']" alt="">
-          </div>
-
-          <div class="menu-desc-nav">
-            <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt=""></button>
-          </div>
+          <button class="menu-desc-nav next" @click="nextItem"><img src="/img/icons/icon-review-button-right.svg" alt=""></button>
         </div><!-- menu-photos -->
 
         <div class="menu-desc-wrapper">
           <div class="menu-desc">
             <div class="menu-desc-header">
               <div class="menu-desc-nav">
-                <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt="">
-                </button>
+                <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt=""></button>
                 <div class="slide-number">
                   <span class="current-slide">{{ activeItem }}</span> <span class="divider">/</span>
-                  <span class="total-slides">{{ main.length }}</span>
+                  <span class="total-slides">{{ productsData.length }}</span>
                 </div>
-                <button class="next" @click="nextItem">
-                  <img src="/img/icons/icon-arrow-right-black.svg" alt="">
-                </button>
+                <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt=""></button>
               </div>
-              <div class="header-energy-wrapper">
-                <div class="header" v-for="(item, index) in main" :class="{ active: activeItem === ++index }">{{ item['header'] }}
+              <div class="heading-wrapper">
+                <div class="heading" v-for="(item, index) in productsData" v-show=" activeItem === ++index ">{{ item['header'] }}
                 </div>
 
-                <p class="energy" v-for="(item, index) in main" :class="{ active: activeItem === ++index }">
+                <p class="heading__desc" v-for="(item, index) in productsData" v-show=" activeItem === ++index ">
                   <span class="value">{{ item['energy'] }}</span></p>
               </div>
             </div>
             <hr class="d-none d-xl-block">
-            <p class="dishes-desc" v-for="(item, index) in main" :class="{ active: activeItem === ++index }" v-html="item['desc']"></p>
+            <p class="menu-desc-body" v-for="(item, index) in productsData" v-show=" activeItem === ++index " v-html="item['desc']"></p>
           </div>
         </div><!-- menu-desc-wrapper -->
       </div>
 
-      <div class="menu-content main" v-if="activeCat == 2">
-        <div class="menu-photos">
-          <div class="menu-desc-nav">
-            <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt=""></button>
-          </div>
 
-          <div class="menu-photo" v-for="(item, index) in soups" :class="{ active: activeItem === ++index }">
-            <img class="menu-photo-big" :src="item['bigimg']" alt="">
-            <img class="menu-photo-small" :src="item['smallimg']" alt="">
-          </div>
-
-          <div class="menu-desc-nav">
-            <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt=""></button>
-          </div>
-        </div><!-- menu-photos -->
-
-        <div class="menu-desc-wrapper">
-          <div class="menu-desc">
-            <div class="menu-desc-header">
-              <div class="menu-desc-nav">
-                <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt="">
-                </button>
-                <div class="slide-number">
-                  <span class="current-slide">{{ activeItem }}</span> <span class="divider">/</span>
-                  <span class="total-slides">{{ soups.length }}</span>
-                </div>
-                <button class="next" @click="nextItem">
-                  <img src="/img/icons/icon-arrow-right-black.svg" alt="">
-                </button>
-              </div>
-              <div class="header-energy-wrapper">
-                <div class="header" v-for="(item, index) in soups" :class="{ active: activeItem === ++index }">{{ item['header'] }}
-                </div>
-
-                <p class="energy" v-for="(item, index) in soups" :class="{ active: activeItem === ++index }">
-                  <span class="value">{{ item['energy'] }}</span> EUR</p>
-              </div>
-            </div>
-            <hr class="d-none d-xl-block">
-            <p class="dishes-desc" v-for="(item, index) in soups" :class="{ active: activeItem === ++index }">{{item['desc']}}</p>
-          </div>
-        </div><!-- menu-desc-wrapper -->
-      </div>
-
-      <div class="menu-content main" v-if="activeCat == 3">
-        <div class="menu-photos">
-          <div class="menu-desc-nav">
-            <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt=""></button>
-          </div>
-
-          <div class="menu-photo" v-for="(item, index) in deserts" :class="{ active: activeItem === ++index }">
-            <img class="menu-photo-big" :src="item['bigimg']" alt="">
-            <img class="menu-photo-small" :src="item['smallimg']" alt="">
-          </div>
-
-          <div class="menu-desc-nav">
-            <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt=""></button>
-          </div>
-        </div><!-- menu-photos -->
-
-        <div class="menu-desc-wrapper">
-          <div class="menu-desc">
-            <div class="menu-desc-header">
-              <div class="menu-desc-nav">
-                <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt="">
-                </button>
-                <div class="slide-number">
-                  <span class="current-slide">{{ activeItem }}</span> <span class="divider">/</span>
-                  <span class="total-slides">{{ deserts.length }}</span>
-                </div>
-                <button class="next" @click="nextItem">
-                  <img src="/img/icons/icon-arrow-right-black.svg" alt="">
-                </button>
-              </div>
-              <div class="header-energy-wrapper">
-                <div class="header" v-for="(item, index) in deserts" :class="{ active: activeItem === ++index }">{{ item['header'] }}
-                </div>
-
-                <p class="energy" v-for="(item, index) in deserts" :class="{ active: activeItem === ++index }">
-                  <span class="value">{{ item['energy'] }}</span> EUR</p>
-              </div>
-            </div>
-            <hr class="d-none d-xl-block">
-            <p class="dishes-desc" v-for="(item, index) in deserts" :class="{ active: activeItem === ++index }">{{item['desc']}}</p>
-          </div>
-        </div><!-- menu-desc-wrapper -->
-      </div>
-
-      <div class="menu-content salads" v-if="activeCat == 4">
-        <div class="menu-photos">
-          <div class="menu-desc-nav">
-            <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt=""></button>
-          </div>
-
-          <div class="menu-photo" v-for="(item, index) in salads" :class="{ active: activeItem === ++index }">
-            <img class="menu-photo-big" :src="item['bigimg']" alt="">
-            <img class="menu-photo-small" :src="item['smallimg']" alt="">
-          </div>
-
-          <div class="menu-desc-nav">
-            <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt=""></button>
-          </div>
-        </div><!-- menu-photos -->
-
-        <div class="menu-desc-wrapper">
-          <div class="menu-desc">
-            <div class="menu-desc-header">
-              <div class="menu-desc-nav">
-                <button class="prev" @click="prevItem"><img src="/img/icons/icon-arrow-left-black.svg" alt="">
-                </button>
-                <div class="slide-number">
-
-                  <span class="current-slide">{{ activeItem }}</span> <span class="divider">/</span>
-                  <span class="total-slides">{{ salads.length }}</span>
-
-                </div>
-                <button class="next" @click="nextItem"><img src="/img/icons/icon-arrow-right-black.svg" alt="">
-                </button>
-              </div>
-              <div class="header-energy-wrapper">
-                <div class="header" v-for="(item, index) in salads" :class="{ active: activeItem === ++index }">{{ item['header'] }}
-                </div>
-
-                <p class="energy" v-for="(item, index) in salads" :class="{ active: activeItem === ++index }">
-                  <span class=" value">{{ item['energy'] }}</span> EUR</p>
-
-              </div>
-            </div>
-            <hr class="d-none d-xl-block">
-            <p class="dishes-desc" v-for="(item, index) in salads" :class="{ active: activeItem === ++index }">{{item['desc']}}</p>
-          </div>
-        </div><!-- menu-desc-wrapper -->
-      </div>
 
     </div>
   </section>
