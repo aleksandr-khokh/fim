@@ -17,108 +17,85 @@ const portfolio = new Vue({
     data: {
       activeCat: 1,
         activeItem: 1,
-        main: [
+        light: [
+            
             {
-              header: "Худи с капюшоном",
+              header: "Худи с коротким рукавом",
+                desc: "<p>Шелкотрафаретная печать в один цвет. Выдерживает до 20 стирок.</p>",
+                energy: "Тираж от 100 штк",
+                bigimg: "/img/portfolio/hoodie-02.webp",
+            },
+        ],
+        pechat: [
+           {
+              header: "Футболка с принтом",
                 desc: "<p>Мы используем футер 320-340 гр.<br>Много вариантов оттенков и фактуры</p>",
                 energy: "Тираж от 300 штук",
-                bigimg: "/img/portfolio/hudi.png",
+                bigimg: "/img/portfolio/tshirt-01.webp",
             },
             {
-              header: "Сумки",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/hot/IMG_1562_ryba.jpg",
+              header: "Футболка с принтом",
+                desc: "<p>Шелкотрафаретная печать в один цвет. Выдерживает до 20 стирок.</p>",
+                energy: "Тираж от 100 штк",
+                bigimg: "/img/portfolio/tshirt-05.webp",
             },
             {
-              header: "Худи",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/hot/IMG_1563_ryba.jpg",
+              header: "Футболка с принтом",
+                desc: "<p>Шелкотрафаретная печать в один цвет. Выдерживает до 20 стирок.</p>",
+                energy: "Тираж от 100 штк",
+                bigimg: "/img/portfolio/tshirt-04.webp",
             },
         ],
-        soups: [
+        raznoe: [
             {
-              header: "Суп и хлеб",
+              header: "Носки",
                 desc: "",
                 energy: "368",
-                bigimg: "/img/restaurant/menu/soups/IMG_1503_sup-hleb.jpg",
+                bigimg: "/img/portfolio/socks.webp",
             },
             {
-              header: "Суп с морепродуктами",
+              header: "Шоппер",
                 desc: "",
                 energy: "368",
-                bigimg: "/img/restaurant/menu/soups/IMG_1517_moreproducty.jpg",
+                bigimg: "/img/portfolio/shopper-black.webp",
             },
             {
-              header: "Суп с морковью",
+              header: "Шоппер с принтом",
                 desc: "",
                 energy: "368",
-                bigimg: "/img/restaurant/menu/soups/IMG_1518_morkov.jpg",
-            },
-        ],
-        deserts: [
-            {
-              header: "Сырники",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/deserts/IMG_1416-syrniki.jpg",
-            },
-            {
-              header: "Вафли",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/deserts/IMG_1429-vafli-syrniki.jpg",
-            },
-            {
-              header: "Штрудель",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/deserts/IMG_1458-shtrudel.jpg",
-            },
-            {
-              header: "Щербет",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/deserts/IMG_1479-sherbet.jpg",
-            },
-            {
-              header: "Ананас",
-                desc: "",
-                energy: "368",
-                bigimg: "/img/restaurant/menu/deserts/IMG_1496_ananas.jpg",
+                bigimg: "/img/portfolio/shopper.webp",
             },
         ],
-        salads: [
+        seasons: [
             {
               header: "Хамон",
                 desc: "Хамон",
                 energy: "368",
-                bigimg: "/img/restaurant/menu/salads/IMG_1523_hamon.jpg",
+                bigimg: "/img/portfolio/IMG_1523_hamon.webp",
             },
         ],
    },
     computed: {
       itemsLength: function(){
         if( this.activeCat === 1 ){
-          return this.main.length;
+          return this.light.length;
         } else if (this.activeCat === 2 ) {
-          return this.soups.length;
+          return this.pechat.length;
         } else if (this.activeCat === 3 ) {
-          return this.deserts.length;
+          return this.raznoe.length;
         } else if (this.activeCat === 4 ) {
-          return this.salads.length;
+          return this.seasons.length;
         }
       },
       productsData: function (  ){
         if( this.activeCat === 1 ){
-          return this.main;
+          return this.light;
         } else if (this.activeCat === 2 ) {
-          return this.soups;
+          return this.pechat;
         } else if (this.activeCat === 3 ) {
-          return this.deserts;
+          return this.raznoe;
         } else if (this.activeCat === 4 ) {
-          return this.salads;
+          return this.seasons;
         }
       }
     },
@@ -182,24 +159,22 @@ const portfolio = new Vue({
         <button class="menu-item-nav" @click="prevCat"><img src="/img/icons/rhombus-arrow-up-bronze.svg" alt=""></button>
 
         <div class="menu-cat__link__wrapper">
-          <div class="menu-cat__link" :class="{active : activeCat == 1}" @click="activeCat = 1">Пошив</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 1}" @click="activeCat = 1">Легкая одежда</div>
           <div class="menu-cat__link" :class="{active : activeCat == 2}" @click="activeCat = 2">Печать</div>
-          <div class="menu-cat__link" :class="{active : activeCat == 3}" @click="activeCat = 3">Вышивка</div>
-          <div class="menu-cat__link" :class="{active : activeCat == 4}" @click="activeCat = 4">Разработка</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 3}" @click="activeCat = 3">Разное</div>
+          <div class="menu-cat__link" :class="{active : activeCat == 4}" @click="activeCat = 4">Сезонная одежда</div>
         </div>
 
         <button class="menu-item-nav" @click="nextCat"><img src="/img/icons/rhombus-arrow-down-bronze.svg" alt=""></button>
 
       </div><!-- menu-categories -->
 
-      <div class="menu-content main">
+      <div class="menu-content">
         <div class="menu-photo__wrapper">
           <button class="menu-desc-nav prev" @click="prevItem"><img src="/img/icons/icon-review-button-left.svg" alt=""></button>
 
           <div class="menu-photo" v-for="(item, index) in productsData" :class="{ active: activeItem === ++index }">
-            <transition name="fade">
               <img :src="item['bigimg']" alt="" v-show="activeItem === index">
-            </transition>
           </div>
 
           <button class="menu-desc-nav next" @click="nextItem"><img src="/img/icons/icon-review-button-right.svg" alt=""></button>
