@@ -19,15 +19,20 @@ if ( have_posts() ):
   while ( have_posts() ): the_post(); ?>
 
     <main id="content" role="main">
+
+    <section class="hero">
       <div class="container">
-        <section class="hero">
-          <div class="row">
-            <div class="col-12  col-lg-6">
-              <h1 class="hero__title">Пошив, печать <span class="break">на текстиле,</span> вышивка</h1>
-            </div>
+        <div class="row">
+          <div class="col-12  col-lg-6">
+<!--              <h1 class="hero__title">Пошив, печать <span class="break">на текстиле,</span> вышивка</h1>-->
+            <h1 class="hero__title">ФИМ - это современная швейная фабрика в Москве с богатой историей.<br>Мастерская по пошиву, вышивке и печати любой сложности.</h1>
           </div>
-          <img class="hero__bg-img" src="/img/front-page-hero.png" alt="">
-        </section>
+        </div>
+        <img class="hero__bg-img" src="/img/front-page-hero.png" alt="">
+      </div>
+    </section>
+
+      <div class="container">
 
         <section id="about">
           <h2 class="about-title">О нашей мастерской!</h2>

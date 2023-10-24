@@ -37,7 +37,7 @@ ob_start(); ?>
 
       </div>
     </div>
-    <iframe src="//yandex.ru/map-widget/v1/?um=constructor%3A5c2fd4122e2afa6e7cef8f53c323c98339d3c69f1e3813e6a2955fbc5db58c9b&amp;source=constructor" width="100%" height="550" frameborder="0"></iframe>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5c2fd4122e2afa6e7cef8f53c323c98339d3c69f1e3813e6a2955fbc5db58c9b&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
   </section>
 
 

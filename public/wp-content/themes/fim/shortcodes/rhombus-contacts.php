@@ -16,15 +16,6 @@ function rhombus_contacts( $atts, $content ){
     <div class="row">
       <div class="col-12 col-md-6 col-xl-3">
         <div class="rhombus-contact__item">
-          <div class="rhombus-contact__title"><h5>По вопросам печати</h5></div>
-          <div class="rhombus-contact__info">
-            <div class="rhombus-contact__name">Станислав</div>
-            <div class="rhombus-contact__phone"><a href="tel:<?= return_phone_from_string(get_field('stas_phone', 'option')); ?>"><?= get_field('stas_phone', 'option'); ?></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-xl-3">
-        <div class="rhombus-contact__item">
           <div class="rhombus-contact__title"><h5>По вопросам пошива</h5></div>
           <div class="rhombus-contact__info">
             <div class="rhombus-contact__name">Галина</div>
@@ -32,6 +23,16 @@ function rhombus_contacts( $atts, $content ){
           </div>
         </div>
       </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="rhombus-contact__item">
+          <div class="rhombus-contact__title"><h5>По вопросам печати</h5></div>
+          <div class="rhombus-contact__info">
+            <div class="rhombus-contact__name">Станислав</div>
+            <div class="rhombus-contact__phone"><a href="tel:<?= return_phone_from_string(get_field('stas_phone', 'option')); ?>"><?= get_field('stas_phone', 'option'); ?></a></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

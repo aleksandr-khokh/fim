@@ -50,14 +50,19 @@ foreach($options_keys as $key ) {
     <div class="header__top">
 
       <div class="logo__wrapper">
-        <a href="/" title="<?=bloginfo('description')?>">
-          <img class="header__top__logo" src="/img/brandbook/logo-without-paddings.svg" alt="<?=bloginfo('description')?>">
+        <a href="/" title="<?=bloginfo('description')?>" class="header__top__logo-link">
+<!--          <img class="header__top__logo" src="/img/brandbook/logo-without-paddings.svg" alt="--><? //=bloginfo('description')?><!--">-->
+          <span class="header__top__logo-text">ФИМ</span>
         </a>
       </div>
 
-      <address><?=$options['address']?></address>
-      <a class="header__top__email" href="mailto:<?=$options['email']?>" target="_blank"><?=$options['email']?></a>
-      <a class="header__top__phone" href="tel:<?=$options['phone']?>" target="_blank"><?=$options['phone']?></a>
+      <div class="header__top__description"><?=bloginfo('description')?></div>
+
+      <address>
+        <?=$options['address']?>
+        <br>
+        Пн-Пт: с 9 до 18
+      </address>
 
       <?php if( isset($options['whatsapp']) || isset($options['telegram']) ) { ?>
         <ul class="social-links list-unstyled">
@@ -66,12 +71,15 @@ foreach($options_keys as $key ) {
         </ul>
       <?php } ?>
 
+      <div class="text-center">
+        <div><a class="header__top__phone" href="tel:<?= return_phone_from_string( $options[ 'phone' ] )?>" target="_blank"><?= $options[ 'phone' ] ?></a></div>
+        <!-- div><a class="header__top__email" href="mailto:<?= $options[ 'email' ] ?>" target="_blank"><?= $options[ 'email' ] ?></a></div -->
+        <button data-fancybox data-src="#order-form" class="header__top__order-button">Заказать звонок</button>
+      </div>
 
-        <button data-fancybox data-src="#order-form" class="btn btn-black-rounded uppercase">Оставить заявку</button>
-
-        <div style="display: none;" id="order-form">
-          <?php require 'templates/order-form.php' ?>
-        </div>
+      <div style="display: none;" id="order-form">
+        <?php require 'templates/order-form.php' ?>
+      </div>
 
 
     </div>

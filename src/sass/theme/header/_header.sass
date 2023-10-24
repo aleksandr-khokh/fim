@@ -5,15 +5,36 @@
   @media (min-width: $lg)
     display: flex
 
+  .header__top__logo-link
+    text-decoration: none
+
   .header__top__logo
     width: 112px
 
-  .header__top__email,
+  .header__top__logo-text
+    font-size: 80px
+    font-weight: 700
+    line-height: 1
+    +transition(color)
+    &:hover
+      color: var(--accent)
+      +transition(color)
+
   .header__top__phone
+    display: inline-block
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 18px
+    text-decoration: none
+
+  .header__top__email
     +sm-text
     text-decoration: none
     &:hover
       text-decoration: underline
+
+  .header__top__description
+    max-width: 320px
 
   address
     +sm-text
@@ -25,6 +46,12 @@
 
     li:not(:last-child)
       margin-right: 45px
+
+  .header__top__order-button
+    @extend .btn
+    @extend .btn-black-rounded
+    text-transform: uppercase
+    font-size: 16px
 
 .hero
   position: relative
