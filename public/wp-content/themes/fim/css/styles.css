@@ -5509,6 +5509,11 @@ blockquote.blockquote .blockoute__author {
   background: #ff5c6d;
 }
 
+.send-order__result {
+  text-align: center;
+  display: none;
+}
+
 #footer {
   margin-top: 100px;
 }
@@ -5758,6 +5763,7 @@ body.home {
 }
 @media (min-width: 768px) {
   .home .hero__title {
+    color: var(--black);
     font-size: 60px;
     line-height: 1.3;
   }
