@@ -124,3 +124,24 @@ function custom_login_logo() {
       }
       </style>';
 }
+
+// GOOGLE ReCaptcha
+add_action( 'init', 'add_recaptcha' );
+function add_recaptcha() {
+
+  define( 'SITE_KEY', '6LfqWNcoAAAAALgUUKOcv4e8SF9MNEZiekUw3WPr' );
+
+  if ( ! is_admin() ) add_action( 'wp_enqueue_scripts', 'recaptcha_script_method' );
+
+  function recaptcha_script_method() {
+    wp_enqueue_script( 'recaptha', "https://www.google.com/recaptcha/api.js?render=" . SITE_KEY, '', '', '' );
+  }
+
+  add_action( 'wp_footer', function () {
+    echo '<script>grecaptcha.ready(function() {
+				 grecaptcha.execute( "' . SITE_KEY . '", { action: "homepage" }).then(function( token ) {
+					 document.getElementById( "g-recaptcha-response" ).value = token;
+				 });
+		    });</script>';
+  } );
+}

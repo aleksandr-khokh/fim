@@ -1,3 +1,25 @@
+(function ( $ ){
+  // ОТПРАВКА ФОРМЫ ЗАКАЗА
+  $('#order_form').submit(function(e){
+    e.preventDefault();
+    let m_method = $(this).attr('method');
+    let m_action = $(this).attr('action');
+    let m_data  = $(this).serialize();
+
+    $.ajax({
+      type: m_method,
+      url: m_action,
+      data: m_data,
+      success: function( result ){
+        $('.send-order__heading').css("visibility", "hidden");
+        $('.send-order__input_name, .send-order__input_phone, .send-order__button_send').css("display", "none");
+        $('.send-order__result').css("display", "block");
+        console.log(result);
+      }
+    });
+  });
+})(jQuery);
+
 const menu = new Vue({
   el: '#header',
   data: {
