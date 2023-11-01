@@ -1,3 +1,6 @@
+header
+  margin-bottom: 50px
+
 .header__top
   +flex-row-sb-aic
   padding: 34px 0
@@ -9,7 +12,7 @@
     text-decoration: none
 
   .header__top__logo
-    width: 112px
+    width: 150px
 
   .header__top__logo-text
     font-size: 80px
@@ -35,6 +38,9 @@
 
   .header__top__description
     max-width: 320px
+    display: none
+    @media (min-width: $xl)
+      display: block
 
   address
     +sm-text

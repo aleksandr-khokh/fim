@@ -22,13 +22,17 @@ if ( have_posts() ):
 
     <section class="hero">
       <div class="container">
-        <div class="row">
-          <div class="col-12  col-lg-6">
-<!--              <h1 class="hero__title">Пошив, печать <span class="break">на текстиле,</span> вышивка</h1>-->
-            <h1 class="hero__title">ФИМ - это современная швейная фабрика в Москве с богатой историей.<br>Мастерская по пошиву, вышивке и печати любой сложности.</h1>
+
+        <div class="hero__content__wrapper">
+          <div class="hero__content">
+            <img class="header__top__logo" src="/img/brandbook-1/logo.svg" alt="<?=bloginfo('description')?>">
+            <hr class="hero__content__line">
+            <h1 class="fp-hero__title">Современная швейная фабрика в Москве с богатой историей. Мастерская по пошиву, вышивке и печати любой сложности.</h1>
+          </div>
+          <div class="hero__img">
+            <img src="/img/fp-hero.jpg" alt="Московская Швейная фабрика">
           </div>
         </div>
-        <img class="hero__bg-img" src="/img/front-page-hero.png" alt="">
       </div>
     </section>
 
@@ -61,7 +65,7 @@ if ( have_posts() ):
         <!--          <div class="col-12 col-md-3"><img src="/img/about/EPRINT277309 1.png" alt=""></div>-->
         <!--        </div>-->
 
-        <?php echo do_shortcode( '[portfolio]' ); ?>
+        <?php // echo do_shortcode( '[portfolio]' ); ?>
         <?php echo do_shortcode( '[reviews]' ); ?>
 
       </div>

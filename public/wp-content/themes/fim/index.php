@@ -6,7 +6,7 @@
 
     <main id="content" role="main">
        <div class="container">
-         <h1 class="text-center my-md-100"><?php the_title();?></h1>
+         <h1 class="text-center my-md-50"><?php the_title();?></h1>
          <?php if(!is_front_page() && function_exists('dp_breadcrumb')){
            echo dp_breadcrumb();
          } ?>

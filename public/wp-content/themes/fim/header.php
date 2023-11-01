@@ -26,7 +26,8 @@ foreach($options_keys as $key ) {
 <html <?php language_attributes(); ?>>
 <head>
   <?php require 'templates/meta-properties.php' ?>
-  <?php require 'templates/favicons.php' ?>
+  <?php // require 'templates/favicons.php' ?>
+  <link rel="shortcut icon" href="<?= $tpl_dir ?>/favicon.ico" type="image/x-icon">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -40,7 +41,7 @@ foreach($options_keys as $key ) {
       <div id="lottie-menu" style="width: 32px; height: 32px;"></div>
     </button>
 
-    <a href="/"><img class="top-bar-mobile__logo" src="/img/brandbook/logo.svg" alt=""></a>
+    <a href="/" class="top-bar-mobile__logo__link" ><img class="top-bar-mobile__logo" src="/img/brandbook-1/logo.svg" alt=""></a>
 
     <a class="top-bar-mobile__phone__link" href="tel:<?=$options['phone']?>" rel="nofollow"><i class="bi bi-telephone"></i></a>
   </div>
@@ -54,8 +55,7 @@ foreach($options_keys as $key ) {
 
       <div class="logo__wrapper">
         <a href="/" title="<?=bloginfo('description')?>" class="header__top__logo-link">
-<!--          <img class="header__top__logo" src="/img/brandbook/logo-without-paddings.svg" alt="--><? //=bloginfo('description')?><!--">-->
-          <span class="header__top__logo-text">ФИМ</span>
+          <img class="header__top__logo" src="/img/brandbook-1/logo.svg" alt="<?=bloginfo('description')?>">
         </a>
       </div>
 

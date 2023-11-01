@@ -11,13 +11,11 @@ class Mail {
 	public static $recipient;
 	public static $secret_key;
 
-	public function __construct( $name, $phone, $email ) {
+	public function __construct( $name, $phone ) {
 		$this->name              = htmlspecialchars( $name );
 		$this->phone             = htmlspecialchars( $phone );
-		$this->email             = htmlspecialchars( $email );
 		$this->fields['Клиент']  = $this->name;
 		$this->fields['Телефон'] = $this->phone;
-		$this->fields['Email']   = $this->email;
 	}
 
 	public static function getCaptcha( $response ){
@@ -28,7 +26,7 @@ class Mail {
 	protected function getHeaders() {
 		$this->headers = "MIME-Version: 1.0\r\n";
 		$this->headers .= "Content-type: text/html; charset=utf-8\r\n";
-		$this->headers .= "From: Electropompa {$this->type} <site@elektropompa.ru>\r\n";
+		$this->headers .= "From: EPrint {$this->type} <site@eprint.ru>\r\n";
 		$this->headers .= "Reply-To: {$this->email}\r\n";
 		return $this->headers;
 	}
@@ -38,7 +36,7 @@ class Mail {
 	}
 
 	protected function getMessage() {
-		$this->message = "<html><head><title>Заказ с сайта {$this->type}</title></head><body><table>";
+		$this->message = "<html><head><title>Заказ с сайта EPrint</title></head><body><table>";
 		foreach ( $this->fields as $key => $value ) {
 			$this->message .= "<tr><td>{$key}</td><td>{$value}</td></tr>";
 		}
@@ -65,27 +63,4 @@ class GeneralMail extends Mail {
     return $this->fields;
   }
 }
-class VesselsMail extends Mail {
-  protected $type = "на баки";
-  public function __construct( $name, $phone, $email, $equipment ) {
-    parent::__construct( $name, $phone, $email );
-    $this->fields['Бак'] = htmlspecialchars( $equipment );
-  }
-  public function getFields(){
-    return $this->fields;
-  }
-}
 
-class SitMail extends Mail {
-	protected $type = "Sit";
-}
-
-class InnovitaMail extends Mail {
-  protected $type = "Innovita";
-
-  public function __construct( $name, $phone, $email, $innovitaName, $innovitaPrice ) {
-    parent::__construct( $name, $phone, $email );
-    $this->fields['Продукт'] = htmlspecialchars( $innovitaName );
-    $this->fields['Цена']    = htmlspecialchars( $innovitaPrice );
-  }
-}

@@ -1,29 +1,47 @@
-body.home
-  background: $gray-50 url('/img/ellipse.svg') no-repeat
-  background-position: 100% -260px
-  @media (min-width: $md)
-    background-position: 500px -150px
-  @media (min-width: $lg)
-    background-position: 100% 0
+//body.home
+//  background: $gray-50 url('/img/ellipse.svg') no-repeat
+//  background-position: 100% -260px
+//  @media (min-width: $md)
+//    background-position: 500px -150px
+//  @media (min-width: $lg)
+//    background-position: 100% 0
 
 .home
 
   .hero
     position: relative
-    @media (min-width: $md)
+    @media (min-width: $lg)
+      margin-bottom: 90px
+    @media (min-width: $xl)
       margin-bottom: 180px
 
-  .hero__title
-    font-size: 36px
-    margin-top: 20px
-    @media (min-width: $md)
-      color: var(--black)
-      font-size: 60px
-      line-height: 1.3
+  .hero__content__wrapper
+    display: grid
+    margin-bottom: 40px
     @media (min-width: $lg)
-      font-size: 40px
+      grid-template-columns: repeat(2, 1fr)
+      grid-column-gap: 30px
+      margin-bottom: 0
+
+  .hero__content
+    margin-top: 40px
+
+    .hero__content__line
+      width: 172px
+      margin: 20px 0
+      background: var(--accent)
+      height: 3px
+
+  .fp-hero__title
+    font-size: 24px
+    @media (min-width: $lg)
+      color: $neutral-600
+      font-size: 30px
+      line-height: 1.3
+    @media (min-width: $xl)
+      font-size: 36px
       line-height: 1.4em
-      margin-top: 80px
+
 
   .hero__bg-img
     @media (min-width: $md)
